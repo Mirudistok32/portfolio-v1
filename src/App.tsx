@@ -4,12 +4,12 @@ import { PATH } from './Route'
 import './App.scss';
 import { Home } from './components/Home/Home';
 import { ErrorPath } from './components/utils/ErrorPath/ErrorPath'
-import { Navigation } from './components/Navigation/Navigation';
+import { ContainerNavigation } from './components/Navigation/ContainerNavigation';
 
 function App() {
   return (
     <div className="app">
-      <Navigation />
+      <ContainerNavigation />
       <div className="app__wrap">
         <div className="app__content">
           <Switch>

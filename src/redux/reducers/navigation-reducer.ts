@@ -2,11 +2,11 @@ import { InferActionsTypes } from "../store"
 
 
 type InitialStateType = {
-
+    isOpenNav: boolean
 }
 
 const initialState: InitialStateType = {
-
+    isOpenNav: false
 }
 
 
@@ -20,5 +20,5 @@ export const navigationReducer = (state = initialState, action: ActionsTypes): I
 
 
 export const actionsNavigationReducer = {
-
+    toggleOpenNavListAC: (is: boolean) => ({ type: 'NAVIGATION/TOGGLE-OPEN-NAV-LIST', payload: { is } } as const)
 }
