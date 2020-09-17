@@ -17,6 +17,7 @@ function App() {
             <Route render={() => <ErrorPath children={'Error path!'} />} />
           </Switch>
         </div>
+        
       </div>
     </div>
   );
