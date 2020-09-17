@@ -4,20 +4,20 @@ import { PATH } from './Route'
 import './App.scss';
 import { Home } from './components/Home/Home';
 import { ErrorPath } from './components/utils/ErrorPath/ErrorPath'
+import { Navigation } from './components/Navigation/Navigation';
 
 function App() {
   return (
     <div className="app">
+      <Navigation />
       <div className="app__wrap">
         <div className="app__content">
           <Switch>
             <Route exact path={'/'} render={() => <Redirect to={PATH.home} />} />
             <Route exact path={PATH.home} render={() => <Home />} />
-
             <Route render={() => <ErrorPath children={'Error path!'} />} />
           </Switch>
         </div>
-        
       </div>
     </div>
   );
