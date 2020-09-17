@@ -5,7 +5,9 @@
   box-shadow: 0 0 0 10px lightskyblue;
   border-radius: 50%;
   &__link {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
     overflow: hidden;
   }

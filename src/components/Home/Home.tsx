@@ -2,6 +2,7 @@ import React from 'react'
 import s from './Home.module.scss'
 import myPhoto from '../../assets/images/photos/photoForAvatar.png'
 import { Images } from '../Images/Images'
+import { PATH } from '../../Route'
 
 type PropsType = {
 
@@ -14,7 +15,7 @@ export const Home: React.FC<PropsType> = (props) => {
         <div className={s.home}>
             <div className={s.home__wrap}>
                 <div className={s.home__photo}>
-                    <Images src={myPhoto} alt={'my photo'} />
+                    <Images src={myPhoto} alt={'my photo'} title={'about me'} link={PATH.about} />
                 </div>
                 <div className={s.home__content}>
                     <div className={s.home__hi}>Hi `everybody!`</div>
