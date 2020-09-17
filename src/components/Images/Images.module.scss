@@ -1,0 +1,26 @@
+.image {
+  display: inline-block;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 0 0 10px lightskyblue;
+  border-radius: 50%;
+  &__link {
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  &__photo {
+    display: block;
+    background-color: #000;
+    position: relative;
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   background-color: rgba(0, 0, 0, 0.281);
+    //   top: 0;
+    //   bottom: 0;
+    //   right: 0;
+    //   left: 0;
+    // }
+  }
+}
