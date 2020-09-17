@@ -4,14 +4,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 800px;
+  max-width: 830px;
   &__wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
   &__photo {
-    margin-right: 30px;
+    margin-right: 40px;
   }
   &__content {
     display: flex;
@@ -28,6 +28,7 @@
     font-size: 2.8em;
     span {
       font-family: "Poppins", sans-serif;
+      font-weight: 500;
       color: lightseagreen;
     }
   }

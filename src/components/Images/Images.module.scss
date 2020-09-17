@@ -6,6 +6,10 @@
   border-radius: 10px;
   box-shadow: 0 0 0 10px $colorBorderMyPhoto;
   border-radius: 50%;
+  transition: $transition;
+  &:hover{
+    box-shadow: 0 0 0 10px $colorBorderMyPhotoHover;
+  }
   &__link {
     display: flex;
     justify-content: center;
