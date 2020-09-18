@@ -1,14 +1,25 @@
+import { PATH } from "../../Route"
 import { InferActionsTypes } from "../store"
 
+export type NavElementType = {
+    title: string
+    link: string
+}
 
 type InitialStateType = {
     isOpenNav: boolean
-    navElements: Array<string>
+    navElements: Array<NavElementType>
 }
 
 const initialState: InitialStateType = {
     isOpenNav: false,
-    navElements: ['Home', 'About', 'Portfolio', 'Contact']
+    // Не забыть изменить переменную в _variable.scss ($countNavigationElement)
+    navElements: [
+        { title: 'Home', link: PATH.home },
+        { title: 'About', link: PATH.about },
+        { title: 'Portfolio', link: PATH.portfolio },
+        { title: 'Contact', link: PATH.contact },
+    ]
 }
 
 

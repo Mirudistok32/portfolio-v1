@@ -1,3 +1,5 @@
+@import "../../scss/variable";
+
 .home {
   color: #fff;
   height: inherit;
@@ -20,7 +22,7 @@
   }
   &__content-hi {
     font-size: 1.4em;
-    span{
+    span {
       font-style: italic;
     }
   }
@@ -29,7 +31,7 @@
     span {
       font-family: "Poppins", sans-serif;
       font-weight: 500;
-      color: lightseagreen;
+      color: $colorBorderMyPhoto;
     }
   }
   &__content-about {

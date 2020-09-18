@@ -1,4 +1,4 @@
-import React, { MouseEvent } from 'react'
+import React, { MouseEvent, useMemo } from 'react'
 import s from './DownArrowSVG.module.scss'
 
 type PropsType = {
@@ -6,6 +6,8 @@ type PropsType = {
     colorBody?: string
     height?: number
     weigth?: number
+    classNameForBody?: string
+    classNameForArrow?: string
     onClick?: (e: MouseEvent<SVGSVGElement>) => void
 }
 
@@ -16,14 +18,21 @@ export const DownArrowSVG: React.FC<PropsType> = React.memo((props) => {
         colorBody = '#2196F3',
         onClick,
         height,
-        weigth
+        weigth,
+        classNameForArrow,
+        classNameForBody
     } = props
 
-    const classMain = [s['down-arrow']]
+    const classMain = useMemo(() => { return [s['down-arrow']] }, [])
+    const classArrow = useMemo(() => { return [s['down-arrow__arw']] }, [])
+    const classBody = useMemo(() => { return [s['down-arrow__body']] }, [])
 
     const onClickHandler = (e: MouseEvent<SVGSVGElement>) => {
         onClick && onClick(e)
     }
+
+    if (classNameForArrow) classArrow.push(classNameForArrow)
+    if (classNameForBody) classArrow.push(classNameForBody)
 
     return (
         <svg
@@ -36,12 +45,13 @@ export const DownArrowSVG: React.FC<PropsType> = React.memo((props) => {
             width={weigth}
         >
             <path
+                className={classBody.join('')}
                 fill={colorBody}
                 d="M245.333,0C109.839,0,0,109.839,0,245.333s109.839,245.333,245.333,245.333
 	            s245.333-109.839,245.333-245.333C490.514,109.903,380.764,0.153,245.333,0z"
             />
             <path
-                className={s.arrow}
+                className={classArrow.join('')}
                 fill={colorArrow}
                 d="M317.867,221.867l-19.2,19.2V117.333c0-29.455-23.878-53.333-53.333-53.333S192,87.878,192,117.333
                 v123.584l-19.2-19.2c-19.139-18.289-49.277-18.289-68.416,0c-18.889,18.894-18.889,49.522,0,68.416l118.251,118.251
