@@ -24,8 +24,12 @@ export const DownArrowSVG: React.FC<PropsType> = React.memo((props) => {
     } = props
 
     const classMain = useMemo(() => { return [s['down-arrow']] }, [])
-    const classArrow = useMemo(() => { return [s['down-arrow__arw']] }, [])
-    const classBody = useMemo(() => { return [s['down-arrow__body']] }, [])
+    const classArrow = useMemo(() => { return [s['down-arrow__arw']] }, [classNameForArrow])
+    const classBody = useMemo(() => { return [s['down-arrow__body']] }, [classNameForBody])
+
+    // const classMain = [s['down-arrow']]
+    // const classArrow = [s['down-arrow__arw']]
+    // const classBody = [s['down-arrow__body']]
 
     const onClickHandler = (e: MouseEvent<SVGSVGElement>) => {
         onClick && onClick(e)

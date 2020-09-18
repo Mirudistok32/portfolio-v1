@@ -57,8 +57,7 @@ export const Navigation: React.FC<PropsType> = React.memo((props) => {
                 <DownArrowSVG
                     onClick={onClickDownArrowHandler}
                     height={30}
-                    
-                    // colorArrow={isOpen ? 'lightseagreen' : 'rgba(255, 250, 250, 0.8)'}
+                    classNameForArrow={isOpen ? s.color : ''}
                     colorBody={'transparent'}
                 />
             </span>
