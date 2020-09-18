@@ -3,10 +3,12 @@ import { InferActionsTypes } from "../store"
 
 type InitialStateType = {
     isOpenNav: boolean
+    navElements: Array<string>
 }
 
 const initialState: InitialStateType = {
-    isOpenNav: false
+    isOpenNav: false,
+    navElements: ['Home', 'About', 'Portfolio', 'Contact']
 }
 
 

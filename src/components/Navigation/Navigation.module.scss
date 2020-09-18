@@ -1,8 +1,34 @@
+@import "../../scss//variable";
+
 .navigation {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50px;
+  left: 50px;
   z-index: 6;
   color: #fff;
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__btn {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  &__list {
+    height: 0;
+    overflow: hidden;
+    background-color: wheat;
+    transition: $transition;
+  }
+  &__list-active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(#{$heightNavigationElement * $countNavigationElement});
+  }
+  &__list-element {
+    height: $heightNavigationElement;
+    padding: $paddingNavigationElement;
+    background-color: skyblue;
+  }
 }
