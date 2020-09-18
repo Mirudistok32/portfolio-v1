@@ -14,11 +14,20 @@ type ActionsTypes = InferActionsTypes<typeof actionsNavigationReducer>
 
 
 export const navigationReducer = (state = initialState, action: ActionsTypes): InitialStateType => {
+    switch (action.type) {
+        case 'NAVIGATION/TOGGLE-OPEN-NAV-LIST': {
+            return {
+                ...state, ...action.payload
+            }
+        }
+        default: {
+            return state
+        }
+    }
 
-    return state
 }
 
 
 export const actionsNavigationReducer = {
-    toggleOpenNavListAC: (is: boolean) => ({ type: 'NAVIGATION/TOGGLE-OPEN-NAV-LIST', payload: { is } } as const)
+    toggleOpenNavListAC: (is: boolean) => ({ type: 'NAVIGATION/TOGGLE-OPEN-NAV-LIST', payload: { isOpenNav: is } } as const)
 }

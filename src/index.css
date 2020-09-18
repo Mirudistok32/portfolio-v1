@@ -16,6 +16,7 @@ body,
 
 button {
   cursor: pointer;
+  border-style: none;
 }
 
 ul,
