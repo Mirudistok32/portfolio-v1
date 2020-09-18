@@ -13,6 +13,20 @@
   &__btn {
     display: inline-block;
     margin-bottom: 10px;
+    padding: 5px;
+    transform: translateX(-10px) rotateZ(-10deg);
+    background-color: rgb(34, 34, 36);
+    box-shadow: 0 0 10px 1px #fff;
+    border-radius: 50%;
+    transition: $transition;
+    &:hover {
+      background-color: rgba(34, 34, 36, 0.438);
+      box-shadow: 0 0 10px 1px $colorBorderMyPhoto;
+    }
+  }
+  &__btn-active {
+    box-shadow: 0 0 10px 1px $colorBorderMyPhoto;
+    background-color: rgba(34, 34, 36, 0.438);
   }
   &__list {
     height: 0;

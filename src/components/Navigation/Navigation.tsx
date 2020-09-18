@@ -15,11 +15,18 @@ export const Navigation: React.FC<PropsType> = (props) => {
 
     // переменные для классов
     const listClass = [s.navigation__list]
+    const listButtonClass = [s.navigation__btn]
     const listElementClass = [s['navigation__list-element']]
 
     // Выводим список элементов
     const elements = navElements.map(item => {
-        return <li key={item + 1} className={listElementClass.join(' ')}>{item}</li>
+        return (
+            <li
+                key={item + 1}
+                className={listElementClass.join(' ')}>
+                {item}
+            </li>
+        )
     })
 
     // Функции и колбэки
@@ -30,13 +37,15 @@ export const Navigation: React.FC<PropsType> = (props) => {
     // Какие-то условные действия с классами
     // listClass
     if (isOpen) listClass.push(s['navigation__list-active'])
+    if (isOpen) listButtonClass.push(s['navigation__btn-active'])
 
     return (
         <nav className={s.navigation}>
-            <span className={s.navigation__btn}>
+            <span className={listButtonClass.join(' ')}>
                 <DownArrowSVG
                     onClick={onClickDownArrowHandler}
-                    height={45}
+                    height={30}
+                    colorArrow={isOpen ? 'lightseagreen' : 'snow'}
                     colorBody={'transparent'}
                 />
             </span>
