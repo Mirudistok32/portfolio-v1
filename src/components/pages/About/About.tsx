@@ -31,10 +31,10 @@ export const About: React.FC<PropsType> = React.memo((props) => {
                             <li className={s['about__info-data-element']}>Vk<span>https://vk.com/mirudistok</span></li>
                             <li className={s['about__info-data-element']}>Telegram<span>https://t.me/mirudistok</span></li>
                         </ul>
+                    </div>
                 </div>
-            </div>
-            <div className={s.about__line}></div>
-            {/* <div className={s['about__description-wrap']}>
+                <div className={s.about__line}></div>
+                {/* <div className={s['about__description-wrap']}>
                     <div className={s['about__description-experience']}>
                         <div className={s['about__description-title']}>
 
@@ -46,21 +46,24 @@ export const About: React.FC<PropsType> = React.memo((props) => {
                         </div>
                     </div>
                 </div> */}
-            <div className={s.about__skills}>
-                <div className={s['about__skills-title']}>
-
-                </div>
-                <div className={s['about__skills-contents']}>
-                    <div className={s['about__skills-content']}>
-                        <ul className={s['about__skills-content-list']}>
-                            <li className={s['about__skills-content-element']}>JS</li>
-                            <li className={s['about__skills-content-element']}>TS</li>
-                            <li className={s['about__skills-content-element']}>Яблоки</li>
-                        </ul>
+                <div className={s.about__skills}>
+                    <div className={s['about__skills-title']}>
+                        Skills
+                    </div>
+                    <div className={s['about__skills-contents']}>
+                        <div className={s['about__skills-content']}>
+                            <ul className={s['about__skills-content-list']}>
+                                <li className={s['about__skills-content-element']}>{`<React />`}</li>
+                                <li className={s['about__skills-content-element']}>{`{ javascript }`}</li>
+                                <li className={s['about__skills-content-element']}>{`css {}`}</li>
+                                <li className={s['about__skills-content-element']}>{`<html></html>`}</li>
+                                <li className={s['about__skills-content-element']}>{`Storybook.stories`}</li>
+                                <li className={s['about__skills-content-element']}>{`expect(Jest).toBe('yes')`}</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div >
     )
 })

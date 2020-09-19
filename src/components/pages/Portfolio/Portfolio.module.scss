@@ -1,8 +1,7 @@
 @import "../../../scss/variable";
+@import "../../../scss/mixins";
 
 .portfolio {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include paddingForPages;
+  @include forAllPages;
 }

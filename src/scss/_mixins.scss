@@ -1,7 +1,13 @@
-@mixin button($color: green) {
-  
+@mixin forAllPages() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-shadow: inset 0 0 1200px 0 #000;
 }
 
-@mixin clear-list-style(){
-  
+@mixin paddingForPages($top: 60px, $bottom: 50px) {
+  padding-top: $top;
+  padding-bottom: $bottom;
 }

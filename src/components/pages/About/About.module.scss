@@ -1,9 +1,14 @@
 @import "../../../scss/variable";
+@import "../../../scss/mixins";
+$maxWidthInfoDataList: 550px;
+$widthWrap: 960px;
 
 .about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include forAllPages;
+  @include paddingForPages;
+  &__wrap {
+    width: $widthWrap;
+  }
   &__info-wrap {
     display: flex;
     align-items: flex-start;
@@ -37,7 +42,7 @@
   &__info-data {
     padding: 3px;
   }
-  $maxWidthInfoDataList: 550px;
+
   &__info-data-list {
     // background-color: lightcoral;
     max-width: $maxWidthInfoDataList;
@@ -87,8 +92,16 @@
     }
   }
   &__skills {
+    display: flex;
+    flex-direction: column;
   }
   &__skills-title {
+    align-self: flex-start;
+    font-size: 2em;
+    font-weight: 500;
+    color: snow;
+    text-transform: uppercase;
+    margin-bottom: 100px;
   }
   &__skills-contents {
   }

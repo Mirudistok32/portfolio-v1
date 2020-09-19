@@ -1,8 +1,7 @@
 @import "../../../scss/variable";
+@import "../../../scss/mixins";
 
 .contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include forAllPages;
+  @include paddingForPages;
 }
