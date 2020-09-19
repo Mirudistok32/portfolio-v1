@@ -14,8 +14,8 @@
     position: relative;
     $topLeftPosition: -25px;
     position: relative;
-    &::after{
-      content: '';
+    &::after {
+      content: "";
       position: absolute;
       top: 0;
       right: 0;
@@ -35,7 +35,6 @@
     margin-right: 25px;
   }
   &__info-data {
-    
     padding: 3px;
   }
   $maxWidthInfoDataList: 550px;
@@ -53,16 +52,39 @@
     padding: 15px 0px;
     font-size: 1.1em;
     color: rgba(255, 250, 250, 0.541);
-    span{
+    span {
       color: snow;
       margin-left: 15px;
       font-weight: 300;
-      i{
+      i {
         font-size: 0.7em;
       }
     }
   }
   &__line {
+    $changePosition: 90px;
+    $marginTopBottom: 50px;
+    height: 2px;
+    background-color: dimgray;
+    margin-top: $marginTopBottom;
+    margin-bottom: $marginTopBottom;
+    position: relative;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: inherit;
+    }
+    &::before {
+      left: -$changePosition;
+    }
+    &::after {
+      right: -$changePosition;
+    }
   }
   &__skills {
   }
