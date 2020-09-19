@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Navigation } from './Navigation'
-import { getNavigationIsOpenSelect, getNavigationNavElementsSelect } from '../../redux/selectors/navigationSelector'
+import { getNavigationIsOpenSelect, getNavigationNavElementsSelect } from '../../redux/selectors/navigation-selector'
 import { actionsNavigationReducer } from '../../redux/reducers/navigation-reducer'
 
 type OwnerProps = {
