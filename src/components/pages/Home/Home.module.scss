@@ -1,9 +1,11 @@
-@import "../../scss/variable";
+@import "../../../scss/variable";
 
 .home {
+  min-height: inherit;
   color: #fff;
   height: inherit;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   max-width: 830px;

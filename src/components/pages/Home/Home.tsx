@@ -1,8 +1,9 @@
 import React from 'react'
 import s from './Home.module.scss'
-import myPhoto from '../../assets/images/photos/photoForAvatar.png'
-import { Images } from '../Images/Images'
-import { PATH } from '../../Route'
+import myPhoto from '../../../assets/images/photos/photoForAvatar.png'
+import { PATH } from '../../../Route'
+import { Images } from '../../Images/Images'
+
 
 type PropsType = {
 
