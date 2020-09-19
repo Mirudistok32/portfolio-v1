@@ -6,6 +6,8 @@ import { Home } from './components//pages/Home/Home';
 import { ErrorPath } from './components/utils/ErrorPath/ErrorPath'
 import { ContainerNavigation } from './components/Navigation/ContainerNavigation';
 import { About } from './components/pages/About/About';
+import { Contact } from './components/pages/Contact/Contact';
+import { Portfolio } from './components/pages/Portfolio/Portfolio';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
             <Route exact path={'/'} render={() => <Redirect to={PATH.home} />} />
             <Route exact path={PATH.home} render={() => <Home />} />
             <Route exact path={PATH.about} render={() => <About />} />
+            <Route exact path={PATH.portfolio} render={() => <Portfolio />} />
+            <Route exact path={PATH.contact} render={() => <Contact />} />
             <Route render={() => <ErrorPath children={'Error path!'} />} />
           </Switch>
         </div>
