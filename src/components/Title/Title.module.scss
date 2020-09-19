@@ -1,0 +1,9 @@
+@import "../../scss/variable";
+
+.title {
+  font-size: 5em;
+  &__second {
+    font-family: "Poppins", sans-serif;
+    color: $colorBorderMyPhoto;
+  }
+}

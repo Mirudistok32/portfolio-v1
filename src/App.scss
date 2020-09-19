@@ -1,6 +1,5 @@
 .app {
-  min-height: 100vh;
-  // height: 100vh;
+  min-height: inherit;
   position: relative;
   background-image: url("./assets/images/forest-5286824.jpg");
   background-attachment: fixed;
@@ -9,19 +8,22 @@
   background-size: cover;
   z-index: 1;
   &__wrap {
-    background-color: rgba(0, 0, 0, 0.800);
-    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    min-height: inherit;
     width: 100%;
     position: relative;
     z-index: 5;
     box-shadow: inset 0 0 10px 5px #000;
   }
   &__content {
-    min-height: 100vh;
+    padding-top: 60px;
+    padding-bottom: 50px;
     height: inherit;
+    min-height: inherit;
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
   }
 }
