@@ -1,7 +1,6 @@
 import React from 'react'
 import s from './About.module.scss'
-import { Title } from '../../Title/Title'
-import { Subtitle } from '../../Subtitle/Subtitle'
+import { TitleHeader } from '../../TitleHeader/TitleHeader'
 
 type PropsType = {
 
@@ -12,12 +11,7 @@ export const About: React.FC<PropsType> = React.memo((props) => {
     return (
         <div className={s.about}>
             <div className={s.about__wrap}>
-                <div className={s.about__title}>
-                    <Title title={'About Me'} />
-                </div>
-                <div className={s.about__subtitle}>
-                    <Subtitle subtitle={'Today you make the code, tomorrow the code makes you money'} />
-                </div>
+                <TitleHeader title={'About Me'} subtitle={'Today you make the code, tomorrow the code makes you money'} />
                 <div className={s['about__info-wrap']}>
                     <div className={s['about__info-photo']}></div>
                     <div className={s['about__info-data']}>
