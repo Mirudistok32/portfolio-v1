@@ -33,7 +33,7 @@ export const About: React.FC<PropsType> = React.memo((props) => {
                             <li className={s['about__info-data-element']}>Nationality<span>Russion</span></li>
                             <li className={s['about__info-data-element']}>Adress<span>Sankt-Petersburg</span></li>
                             <li className={s['about__info-data-element']}>Experience<span>1 year</span></li>
-                            <li className={s['about__info-data-element']}>Langages<span>Russion, English:<i>(Pre-Intermediate)</i></span></li>
+                            <li className={s['about__info-data-element']}>Langages<span>Russion, English</span></li>
                             <li className={s['about__info-data-element']}>Email<span>mirudistok32@gmail.com</span></li>
                             <li className={s['about__info-data-element']}>Vk<span>https://vk.com/mirudistok</span></li>
                             <li className={s['about__info-data-element']}>Telegram<span>https://t.me/mirudistok</span></li>
