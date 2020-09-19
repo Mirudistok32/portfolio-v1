@@ -1,8 +1,10 @@
 import { combineReducers, createStore } from "redux";
 import { navigationReducer } from './reducers/navigation-reducer'
+import { aboutReducer } from './reducers/about-reducer'
 
 const rootReducers = combineReducers({
-    navigationReducer
+    navigationReducer,
+    aboutReducer
 })
 
 type RootReducersType = typeof rootReducers
