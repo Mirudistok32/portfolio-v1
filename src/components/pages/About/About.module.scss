@@ -101,14 +101,23 @@ $widthWrap: 960px;
     font-weight: 500;
     color: snow;
     text-transform: uppercase;
-    margin-bottom: 100px;
+    margin-bottom: 20px;
   }
-  &__skills-contents {
+  // &__skills-contents {}
+  &__skills-contents-list {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
   }
-  &__skills-content {
-  }
-  &__skills-content-list {
-  }
-  &__skills-content-element {
+  &__skills-contents-element {
+    font-size: 1.2em;
+    font-weight: 900;
+    font-family: "Poppins", sans-serif;
+    margin: 10px;
+    padding: 20px;
+    transform: skewX(-10deg);
+    border-radius: 1px;
+    color: #000;
+    letter-spacing: 0.21em;
   }
 }

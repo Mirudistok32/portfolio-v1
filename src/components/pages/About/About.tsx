@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { MouseEvent, useState } from 'react'
 import s from './About.module.scss'
 import { TitleHeader } from '../../TitleHeader/TitleHeader'
 import myPhoto from '../../../assets/images/photos/photoForAvatar.png'
@@ -8,6 +8,13 @@ type PropsType = {
 }
 
 export const About: React.FC<PropsType> = React.memo((props) => {
+
+    const [is, setIs] = useState(false)
+
+    const onClickHandler = (e: MouseEvent<HTMLLIElement>) => {
+        setIs(!is)
+        e.currentTarget.classList.toggle(`${s.active}`)
+    }
 
     return (
         <div className={s.about}>
@@ -51,16 +58,18 @@ export const About: React.FC<PropsType> = React.memo((props) => {
                         Skills
                     </div>
                     <div className={s['about__skills-contents']}>
-                        <div className={s['about__skills-content']}>
-                            <ul className={s['about__skills-content-list']}>
-                                <li className={s['about__skills-content-element']}>{`<React />`}</li>
-                                <li className={s['about__skills-content-element']}>{`{ javascript }`}</li>
-                                <li className={s['about__skills-content-element']}>{`css {}`}</li>
-                                <li className={s['about__skills-content-element']}>{`<html></html>`}</li>
-                                <li className={s['about__skills-content-element']}>{`Storybook.stories`}</li>
-                                <li className={s['about__skills-content-element']}>{`expect(Jest).toBe('yes')`}</li>
-                            </ul>
-                        </div>
+                        <ul className={s['about__skills-contents-list']}>
+                            <li onClick={(e) => onClickHandler(e)} className={s[`about__skills-contents-element`]} style={{ backgroundColor: 'dodgerblue' }} >{`<React />`}</li>
+                            <li onClick={(e) => onClickHandler(e)} className={s[`about__skills-contents-element`]} style={{ backgroundColor: 'mediumslateblue' }} >{`createStore(Redux)`}</li>
+                            <li onClick={(e) => onClickHandler(e)} className={s[`about__skills-contents-element`]} style={{ backgroundColor: 'gold' }} >{`{ javascript }`}</li>
+                            <li onClick={(e) => onClickHandler(e)} className={s[`about__skills-contents-element`]} style={{ backgroundColor: 'deepskyblue' }} >{`type Typescript`}</li>
+                            <li onClick={(e) => onClickHandler(e)} className={s[`about__skills-contents-element`]} style={{ backgroundColor: 'moccasin' }} >{`css {}`}</li>
+                            <li onClick={(e) => onClickHandler(e)} className={s[`about__skills-contents-element`]} style={{ backgroundColor: 'chocolate' }} >{`<html></html>`}</li>
+                            <li onClick={(e) => onClickHandler(e)} className={s[`about__skills-contents-element`]} style={{ backgroundColor: 'deeppink' }} >{`Storybook.stories`}</li>
+                            <li onClick={(e) => onClickHandler(e)} className={s[`about__skills-contents-element`]} style={{ backgroundColor: 'coral' }} >{`expect(Jest).toBe('yes')`}</li>
+                            <li onClick={(e) => onClickHandler(e)} className={s[`about__skills-contents-element`]} style={{ backgroundColor: 'lightblue' }} >{`.get('https://REST.API')`}</li>
+                            <li onClick={(e) => onClickHandler(e)} className={s[`about__skills-contents-element`]} style={{ backgroundColor: 'cornsilk' }} >{`GitHub`}</li>
+                        </ul>
                     </div>
                 </div>
             </div>
