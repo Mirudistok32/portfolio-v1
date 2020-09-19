@@ -7,12 +7,15 @@ export type InfoDataType = {
     id: string
 }
 
-export type StackSkillsType = {
-
+export type ListSkillsDataType = {
+    id: string
+    title: string
+    backgroundColor: string
 }
 
 type InitialStateType = {
     infoDates: Array<InfoDataType>
+    listSkillsDates: Array<ListSkillsDataType>
 }
 
 const initialState: InitialStateType = {
@@ -28,6 +31,18 @@ const initialState: InitialStateType = {
         { key: 'Email', value: 'mirudistok32@gmail.com', id: v4() },
         { key: 'Vk', value: 'https://vk.com/mirudistok', id: v4() },
         { key: 'Telegram', value: 'https://t.me/mirudistok', id: v4() }
+    ],
+    listSkillsDates: [
+        { title: '<React />', backgroundColor: 'dodgerblue', id: v4() },
+        { title: 'createStore(Redux)', backgroundColor: 'mediumslateblue', id: v4() },
+        { title: '{ javascript }', backgroundColor: 'gold', id: v4() },
+        { title: 'type Typescript', backgroundColor: 'deepskyblue', id: v4() },
+        { title: 'css {}', backgroundColor: 'moccasin', id: v4() },
+        { title: '<html></html>', backgroundColor: 'chocolate', id: v4() },
+        { title: 'Storybook.stories', backgroundColor: 'deeppink', id: v4() },
+        { title: "expect(Jest).toBe('yes')", backgroundColor: 'coral', id: v4() },
+        { title: ".get('https://REST.API')", backgroundColor: 'lightblue', id: v4() },
+        { title: 'GitHub', backgroundColor: 'cornsilk', id: v4() },
     ]
 }
 
