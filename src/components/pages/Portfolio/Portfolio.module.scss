@@ -8,23 +8,26 @@
     @include flexJustifyAlignDirection(start, center, column);
   }
   &__content {
-    width: 700px;
-    @include flexJustifyAlignDirection(start, center, column);
+    max-width: $maxWidthContent;
+    @include flexJustifyAlignDirection(center, center, column);
   }
   &__element {
-    width: 100%;
+    @include flexJustifyAlignDirection(center, center, column);
     padding: 5px;
-    background-color: lightgray;
-    // box-shadow: inset 0 0 100px 0 #000;
+    border-radius: 5px;
   }
   &__element-title {
     @include fontUbuntu;
     font-size: 3.5em;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    letter-spacing: 0.05em;
   }
   &__element-wrap {
+    width: inherit;
+    @include flexJustifyAlignDirection(start, center);
   }
   &__element-info {
+    
   }
   &__element-link {
   }
