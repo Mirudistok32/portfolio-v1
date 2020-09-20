@@ -5,7 +5,7 @@ import { PortfolioInfoListDataType } from '../../../redux/reducers/portfolio-red
 
 type PropsType = {
     mainTitle: string
-    id: string
+    id?: string
     listsInfo: Array<PortfolioInfoListDataType>
     iframeLink: string
     iframeTitle: string
