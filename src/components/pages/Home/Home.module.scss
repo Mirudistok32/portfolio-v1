@@ -1,4 +1,5 @@
 @import "../../../scss/variable";
+@import "../../../scss/mixins";
 
 .home {
   color: #fff;
@@ -8,9 +9,7 @@
   align-items: center;
   max-width: 830px;
   &__wrap {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flexJustifyAlignDirection(space-between, center);
   }
   &__photo {
     margin-right: 40px;
@@ -29,8 +28,7 @@
   &__content-name {
     font-size: 2.8em;
     span {
-      font-family: "Poppins", sans-serif;
-      font-weight: 500;
+      @include fontPoppins(500);
       color: $colorBorderMyPhoto;
     }
   }

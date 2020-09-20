@@ -4,5 +4,36 @@
 .portfolio {
   @include paddingForPages;
   @include forAllPages;
-  
+  &__wrap {
+    @include flexJustifyAlignDirection(start, center, column);
+  }
+  &__content {
+    width: 700px;
+    @include flexJustifyAlignDirection(start, center, column);
+  }
+  &__element {
+    width: 100%;
+    padding: 5px;
+    background-color: lightgray;
+    // box-shadow: inset 0 0 100px 0 #000;
+  }
+  &__element-title {
+    @include fontUbuntu;
+    font-size: 3.5em;
+    margin-bottom: 50px;
+  }
+  &__element-wrap {
+  }
+  &__element-info {
+  }
+  &__element-link {
+  }
+  &__element-github {
+  }
+  &__element-description {
+  }
+  &__element-technologies {
+  }
+  &__element-canvas {
+  }
 }

@@ -1,9 +1,10 @@
 @import "../../scss/variable";
+@import "../../scss/mixins";
 
 .title {
   font-size: 5em;
   &__second {
-    font-family: "Poppins", sans-serif;
+    @include fontPoppins;
     color: $colorBorderMyPhoto;
   }
 }

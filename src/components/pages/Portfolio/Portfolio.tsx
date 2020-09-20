@@ -18,13 +18,15 @@ export const Portfolio: React.FC<PropsType> = React.memo((props) => {
                 />
                 <div className={s.portfolio__content}>
                     <div className={s['portfolio__element']}>
-                        <div className={s['portfolio__element-title']}></div>
+                        <div className={s['portfolio__element-title']}>ClickMeGame</div>
                         <div className={s['portfolio__element-wrap']}>
                             <div className={s['portfolio__element-info']}>
-                                <div className={s['portfolio__element-link']}></div>
-                                <div className={s['portfolio__element-github']}></div>
-                                <div className={s['portfolio__element-description']}></div>
-                                <div className={s['portfolio__element-technologies']}></div>
+                                <div className={s['portfolio__element-link']}>https://mirudistok32.github.io/ClickMeGame/</div>
+                                <div className={s['portfolio__element-github']}>https://github.com/Mirudistok32/ClickMeGame</div>
+                                <div className={s['portfolio__element-description']}>
+                                    ClickMeGame - это мини игра, цель которой узнать, сколько вы успеете кликнуть по кнопке "Click" за 10 секунд
+                                </div>
+                                <div className={s['portfolio__element-technologies']}>#react, #javascript, #html, #css, hooks</div>
                             </div>
                             <div className={s['portfolio__element-canvas']}>
                                 <iframe src={"https://mirudistok32.github.io/ClickMeGame/"} title={"ClickMeGame"}></iframe>

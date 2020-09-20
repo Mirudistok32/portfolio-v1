@@ -1,4 +1,5 @@
 @import "../../scss/variable";
+@import "../../scss/mixins";
 
 .navigation {
   position: fixed;
@@ -47,8 +48,7 @@
     height: $heightNavigationElement;
     padding: $paddingNavigationElement;
     transition: $transition;
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
+    @include fontPoppins(300);
     border-left: 3px solid transparent;
     &:hover {
       color: $colorBorderMyPhoto;

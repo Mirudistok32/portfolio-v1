@@ -1,4 +1,5 @@
 @import "../../scss/variable";
+@import "../../scss/mixins";
 
 .title {
   display: flex;
@@ -12,7 +13,6 @@
   }
   &__text {
     font-size: 1.1em;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
+    @include fontPoppins(300);
   }
 }
