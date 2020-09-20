@@ -3,6 +3,7 @@ import s from './About.module.scss'
 import { TitleHeader } from '../../TitleHeader/TitleHeader'
 import myPhoto from '../../../assets/images/photos/photoForAvatar.png'
 import { InfoDataType, ListSkillsDataType } from '../../../redux/reducers/about-reducer'
+import { Element } from '../../Element/Element'
 
 type PropsType = {
     infoDates: Array<InfoDataType>
@@ -14,15 +15,7 @@ export const About: React.FC<PropsType> = React.memo((props) => {
     const { infoDates, listSkillsDates } = props
 
     const renderInfoDates = useMemo(() => infoDates.map(i => {
-        return (
-            <li
-                key={i.id}
-                className={s['about__info-data-element']}
-            >
-                {i.key}
-                <span>{i.value}</span>
-            </li>
-        )
+        return <Element key={i.id} value={i.value} title={i.key} />
     }), [infoDates])
 
     const renderListSkillsDates = useMemo(() => listSkillsDates.map(i => {

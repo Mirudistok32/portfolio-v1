@@ -1,7 +1,6 @@
 @import "../../../scss/variable";
 @import "../../../scss/mixins";
 
-
 .about {
   @include forAllPages;
   @include paddingForPages;
@@ -45,22 +44,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-  }
-  &__info-data-element {
-    display: flex;
-    justify-content: flex-start;
-    width: calc(#{$maxWidthInfoDataList / 2} - 10px);
-    padding: 15px 0px;
-    font-size: 1.1em;
-    color: $colorInfoDataElementKeyOrTitle;
-    span {
-      color: $colorInfoDataElementValueOrSpanInTitle;
-      margin-left: 15px;
-      font-weight: 300;
-      i {
-        font-size: 0.7em;
-      }
-    }
   }
   &__line {
     height: 2px;

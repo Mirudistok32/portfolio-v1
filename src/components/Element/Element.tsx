@@ -2,23 +2,19 @@ import React from 'react'
 import s from './Element.module.scss'
 
 type PropsType = {
-    id: string
-    key: string
+    title: string
     value: string
 }
 
 
-export const Element: React.FC<PropsType> = (props) => {
+export const Element: React.FC<PropsType> = React.memo((props) => {
 
-    const { id, key, value } = props
+    const { title, value } = props
 
     return (
-        <li
-            key={id}
-            className={s.element}
-        >
-            {key}
+        <li className={s.element}>
+            {title}
             <span>{value}</span>
         </li>
     )
-}
+})
