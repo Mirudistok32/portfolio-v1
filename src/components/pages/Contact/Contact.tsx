@@ -17,9 +17,7 @@ export const Contact: React.FC<PropsType> = React.memo((props) => {
                     subtitle={'Magic ceases to exist after you understand how it works.'}
                 />
                 <div className={s.contact__content}>
-                    <div className={s['contact__content-element']}>
-                        
-                    </div>
+
                 </div>
             </div>
         </div>
