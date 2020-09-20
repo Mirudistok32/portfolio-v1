@@ -1,18 +1,31 @@
 @import "../../scss/variable";
+@import "../../scss/mixins";
 
 .element {
   display: flex;
   justify-content: flex-start;
-  width: calc(#{$maxWidthInfoDataList / 2} - 10px);
-  padding: 15px 0px;
+  width: 100%;
+  padding: 15px 5px;
   font-size: 1.1em;
   color: $colorInfoDataElementKeyOrTitle;
+  line-height: 1.5em;
+  letter-spacing: 0.02em;
+  // background-color: lightcoral;
+
   span {
+    text-align: left;
     color: $colorInfoDataElementValueOrSpanInTitle;
     margin-left: 15px;
     font-weight: 300;
-    i {
-      font-size: 0.7em;
+  }
+  a {
+    word-wrap: break-word;
+    color: $colorInfoDataElementValueOrSpanInTitle;
+    margin-left: 15px;
+    font-weight: 300;
+    transition: $transition;
+    &:hover {
+      background-color: #2d2d2d;
     }
   }
 }

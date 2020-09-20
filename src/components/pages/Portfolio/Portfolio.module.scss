@@ -8,35 +8,45 @@
     @include flexJustifyAlignDirection(start, center, column);
   }
   &__content {
-    max-width: $maxWidthContent;
     @include flexJustifyAlignDirection(center, center, column);
   }
   &__element {
     @include flexJustifyAlignDirection(center, center, column);
-    padding: 5px;
-    border-radius: 5px;
+    padding: 15px;
+    padding-bottom: 100px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 4px 13px 16px -5px #000000;
+    margin-bottom: 100px;
   }
   &__element-title {
     @include fontUbuntu;
     font-size: 3.5em;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     letter-spacing: 0.05em;
   }
   &__element-wrap {
-    width: inherit;
-    @include flexJustifyAlignDirection(start, center);
+    width: $maxWidthContent;
+    @include flexJustifyAlignDirection(space-between);
   }
   &__element-info {
-    
-  }
-  &__element-link {
-  }
-  &__element-github {
-  }
-  &__element-description {
-  }
-  &__element-technologies {
+    padding: 20px 5px;
+    width: 50%;
+    font-size: 0.9em;
   }
   &__element-canvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 500px;
+    box-shadow: 0 0 0 5px $colorBorderMyPhoto, inset 0 0 100px 0 #000;
+    border-radius: 5px;
+    padding: 1px;
+    iframe {
+      height: 100%;
+      width: 100%;
+      border-style: none;
+    }
   }
 }

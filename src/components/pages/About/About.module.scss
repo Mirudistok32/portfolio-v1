@@ -44,6 +44,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    & > li {
+      width: calc(#{$maxWidthInfoDataList / 2} - 10px);
+    }
   }
   &__line {
     height: 2px;
