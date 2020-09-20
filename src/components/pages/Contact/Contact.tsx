@@ -13,9 +13,14 @@ export const Contact: React.FC<PropsType> = React.memo((props) => {
         <div className={s.contact}>
             <div className={s.contact__wrap}>
                 <TitleHeader
-                    title={'My Contact'}
+                    title={'My сontact'}
                     subtitle={'Magic ceases to exist after you understand how it works.'}
                 />
+                <div className={s.contact__content}>
+                    <div className={s['contact__content-element']}>
+                        
+                    </div>
+                </div>
             </div>
         </div>
     )

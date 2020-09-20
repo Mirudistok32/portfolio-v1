@@ -1,7 +1,6 @@
 @import "../../../scss/variable";
 @import "../../../scss/mixins";
-$maxWidthInfoDataList: 550px;
-$widthWrap: 960px;
+
 
 .about {
   @include forAllPages;
@@ -17,8 +16,6 @@ $widthWrap: 960px;
     height: 23em;
     box-shadow: inset 0 0 0 5px $colorBorderMyPhoto;
     position: relative;
-    $topLeftPosition: -25px;
-    position: relative;
     &::after {
       content: "";
       position: absolute;
@@ -26,14 +23,14 @@ $widthWrap: 960px;
       right: 0;
       bottom: 0;
       left: 0;
-      top: $topLeftPosition;
-      left: $topLeftPosition;
+      top: $topLeftPositionInfoPhoto;
+      left: $topLeftPositionInfoPhoto;
       background-color: rgba(0, 0, 0, 0.17);
     }
     img {
       position: relative;
-      top: $topLeftPosition;
-      left: $topLeftPosition;
+      top: $topLeftPositionInfoPhoto;
+      left: $topLeftPositionInfoPhoto;
       height: inherit;
       border-radius: 1px;
     }
@@ -44,7 +41,6 @@ $widthWrap: 960px;
   }
 
   &__info-data-list {
-    // background-color: lightcoral;
     max-width: $maxWidthInfoDataList;
     display: flex;
     flex-wrap: wrap;
@@ -56,9 +52,9 @@ $widthWrap: 960px;
     width: calc(#{$maxWidthInfoDataList / 2} - 10px);
     padding: 15px 0px;
     font-size: 1.1em;
-    color: rgba(255, 250, 250, 0.541);
+    color: $colorInfoDataElementKeyOrTitle;
     span {
-      color: snow;
+      color: $colorInfoDataElementValueOrSpanInTitle;
       margin-left: 15px;
       font-weight: 300;
       i {
@@ -67,12 +63,10 @@ $widthWrap: 960px;
     }
   }
   &__line {
-    $changePosition: 90px;
-    $marginTopBottom: 60px;
     height: 2px;
     background-color: dimgray;
-    margin-top: $marginTopBottom;
-    margin-bottom: $marginTopBottom;
+    margin-top: $marginTopBottomAboutLine;
+    margin-bottom: $marginTopBottomAboutLine;
     position: relative;
     &::before,
     &::after {
@@ -85,10 +79,10 @@ $widthWrap: 960px;
       background-color: inherit;
     }
     &::before {
-      left: -$changePosition;
+      left: -$changePositionAboutLine;
     }
     &::after {
-      right: -$changePosition;
+      right: -$changePositionAboutLine;
     }
   }
   &__skills {
