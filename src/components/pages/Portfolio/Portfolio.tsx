@@ -1,4 +1,5 @@
 import React from 'react'
+import { TitleHeader } from '../../TitleHeader/TitleHeader'
 import s from './Portfolio.module.scss'
 
 
@@ -10,7 +11,12 @@ export const Portfolio: React.FC<PropsType> = React.memo((props) => {
 
     return (
         <div className={s.portfolio}>
-            Portfolio
+            <div className={s.portfolio__wrap}>
+                <TitleHeader
+                    title={'My portfolio'}
+                    subtitle={'In theory, theory and practice are inseparable. In practice, this is not the case.'}
+                />
+            </div>
         </div>
     )
 })
