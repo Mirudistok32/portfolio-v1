@@ -11,11 +11,10 @@ type PropsType = {
     iframeTitle: string
 }
 
-export const Portfolio: React.FC<PropsType> = React.memo((props) => {
+export const PortfolioElement: React.FC<PropsType> = React.memo((props) => {
 
     const {
         mainTitle,
-        id,
         listsInfo,
         iframeLink,
         iframeTitle, } = props

@@ -54,7 +54,7 @@ const initialState: InitialStateType = {
             ],
             iframeTitle: "ClickMeGame",
             iframeLink: "https://mirudistok32.github.io/ClickMeGame/",
-        }
+        },
     ],
 }
 
