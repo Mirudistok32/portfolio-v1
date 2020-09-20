@@ -1,11 +1,15 @@
 import React from 'react'
-
+import { Portfolio } from './Portfolio'
 
 type PropsType = {
 
 }
 
-export const Portfolio: React.FC<PropsType> = React.memo((props) => {
+const ContainerPortfolio: React.FC<PropsType> = React.memo((props) => {
+
+    
 
     return <Portfolio />
 })
+
+export default ContainerPortfolio

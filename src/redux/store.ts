@@ -1,10 +1,12 @@
+import { portfolioReducer } from './reducers/portfolio-reducer';
 import { combineReducers, createStore } from "redux";
 import { navigationReducer } from './reducers/navigation-reducer'
 import { aboutReducer } from './reducers/about-reducer'
 
 const rootReducers = combineReducers({
     navigationReducer,
-    aboutReducer
+    aboutReducer,
+    portfolioReducer
 })
 
 type RootReducersType = typeof rootReducers
