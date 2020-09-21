@@ -12,7 +12,6 @@
   }
   &__mainlinks {
     @include flexJustifyAlignDirection(center, start, column);
-
     padding: 40px 100px;
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.6);
@@ -46,5 +45,18 @@
         background-color: rgba($colorBorderMyPhoto, $alpha: 0.5);
       }
     }
+  }
+  &__form {
+    @include flexJustifyAlignDirection(center, center, column);
+    padding: 40px 100px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 4px 13px 16px -5px #000000;
+    margin-bottom: 100px;
+    max-width: calc(#{$widthSectionMainLinks * 1.7} - 60px);
+  }
+  &__form-title {
+    max-width: $widthSectionMainLinks;
+    margin-bottom: 50px;
   }
 }

@@ -59,6 +59,9 @@ export const Contact: React.FC<PropsType> = React.memo((props) => {
                         </li>
                     </ul>
                     <div className={s.contact__form}>
+                        <div className={s['contact__form-title']}>
+                            If you have any suggestion, project or even you want to say Hello.. please fill out the form below and I will reply you shortly.
+                        </div>
                         <ContactFeedbackForm onSubmit={onSubmitContactFeedbackForm} />
                     </div>
                 </div>
