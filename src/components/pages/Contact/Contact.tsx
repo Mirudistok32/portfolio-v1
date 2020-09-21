@@ -22,12 +22,6 @@ export const Contact: React.FC<PropsType> = React.memo((props) => {
                 <div className={s.contact__content}>
                     <ul className={s.contact__mainlinks}>
                         <li className={s.contact__link}>
-                            <span className={s['contact__link-span']}>Email</span>
-                            <a href={''} className={s['contact__link-a']} target="_blank" rel="noopener noreferrer">
-                                mirudistok32@gmail.com
-                            </a>
-                        </li>
-                        <li className={s.contact__link}>
                             <span className={s['contact__link-span']}>Telegram</span>
                             <a href={'https://t.me/mirudistok'} className={s['contact__link-a']} target="_blank" rel="noopener noreferrer">
                                 t.me/mirudistok
@@ -57,9 +51,15 @@ export const Contact: React.FC<PropsType> = React.memo((props) => {
                                 https://twitter.com/postnikov_st
                             </a>
                         </li>
+                        <li className={s.contact__link}>
+                            <span className={s['contact__link-span']}>GutHub</span>
+                            <a href={'https://github.com/mirudistok32'} className={s['contact__link-a']} target="_blank" rel="noopener noreferrer">
+                                github.com/mirudistok32
+                            </a>
+                        </li>
                     </ul>
                     <div className={s.contact__form}>
-                        {/* <ContactFeedbackForm onSubmit={onSubmitContactFeedbackForm} /> */}
+                        <ContactFeedbackForm onSubmit={onSubmitContactFeedbackForm} />
                     </div>
                 </div>
             </div>

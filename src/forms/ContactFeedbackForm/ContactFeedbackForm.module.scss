@@ -1,3 +1,63 @@
-.form{
-    
+@import "../../scss/mixins";
+@import "../../scss/variable";
+
+.form {
+  @include flexJustifyAlignDirection(center, start, column);
+  padding: 40px 100px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 4px 13px 16px -5px #000000;
+  margin-bottom: 100px;
+  &__row {
+    @include flexJustifyAlignDirection(center, start, column);
+    @include fontPoppins;
+    position: relative;
+    margin: 3px 0;
+    margin-bottom: 10px;
+    min-width: $widthSectionMainLinks;
+  }
+  &__row-error {
+    margin-left: 15px;
+    font-size: 0.7em;
+    font-weight: 300;
+    color: red;
+  }
+  &__email,
+  &__name,
+  &__description {
+    width: 100%;
+    margin-left: 10px;
+    padding: 10px;
+    background-color: #2d2d2d;
+    border-bottom: 2px solid snow;
+    box-shadow: inset 0 0 2px 0px #000;
+    color: #fff;
+    font-size: 1em;
+    outline: transparent;
+    resize: none;
+    transition: $transition;
+    &:focus {
+      border-bottom: 2px solid $colorBorderMyPhoto;
+    }
+  }
+  &__title {
+    margin-bottom: 5px;
+    display: block;
+  }
+  &__name {
+  }
+  &__name-error {
+    border-bottom: 2px solid rgb(235, 70, 70);
+    &:focus {
+      border-bottom: 2px solid rgb(235, 70, 70);
+    }
+  }
+  &__email {
+  }
+  &__description {
+    font-size: 1.3em;
+    overflow: hidden;
+  }
+  &__button {
+  }
 }

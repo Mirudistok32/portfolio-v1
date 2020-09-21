@@ -12,12 +12,12 @@
   }
   &__mainlinks {
     @include flexJustifyAlignDirection(center, start, column);
+    
     padding: 40px 100px;
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.6);
-    // background-color: lightcoral;
     box-shadow: 4px 13px 16px -5px #000000;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
   &__link {
     padding: 10px 20px;
