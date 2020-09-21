@@ -1,6 +1,6 @@
 import { FormikConfig, useFormik } from 'formik'
 import * as Yup from 'yup'
-import React, { ChangeEvent} from 'react'
+import React, { ChangeEvent, useState } from 'react'
 import s from './ContactFeedbackForm.module.scss'
 
 export type ContactFeedbackFormInitialValuesType = {
@@ -17,8 +17,8 @@ export const ContactFeedbackForm: React.FC<PropsType> = (props) => {
 
     const { onSubmit } = props
 
-    const maxLinkLength = 60
-    const maxNameLength = 4
+    const maxLinkLength = 50
+    const maxNameLength = 24
     const maxDescriptionLength = 300
 
     const validationSchemaYup = Yup.object({
@@ -56,12 +56,11 @@ export const ContactFeedbackForm: React.FC<PropsType> = (props) => {
     return (
         <form className={s.form} onSubmit={formik.handleSubmit}>
             <label className={s.form__row}>
-                <span className={s.form__title}>Your name</span>
+                <span className={s.form__title + ` ${formik.errors.name ? s['form__title-error'] : ''}`}>Your name</span>
                 <input
                     className={s.form__name + ` ${formik.errors.name ? s['form__name-error'] : ''}`}
                     type="text"
                     name="name"
-                    onBlur={formik.handleBlur}
                     onChange={formik.handleChange}
                     value={formik.values.name}
                 />
@@ -76,23 +75,25 @@ export const ContactFeedbackForm: React.FC<PropsType> = (props) => {
                     className={s.form__email}
                     type="text"
                     name="email"
-                    onBlur={formik.handleBlur}
                     onChange={formik.handleChange}
                     value={formik.values.email}
                 />
+                {
+                    formik.errors.email &&
+                    <span className={s['form__row-error']}>*{formik.errors.email}</span>
+                }
             </label>
             <label className={s.form__row}>
                 <span className={s.form__title}>Your Comment</span>
                 <textarea
                     className={s.form__description}
                     name="description"
-                    onBlur={formik.handleBlur}
                     onChange={(e) => onChangeHandlerTextarea(e)}
                     value={formik.values.description}
                 />
             </label>
 
-            <button className={s.form__button} type="submit">Кликни</button>
+            <button className={s.form__button} type="submit">Send</button>
         </form>
     )
 }

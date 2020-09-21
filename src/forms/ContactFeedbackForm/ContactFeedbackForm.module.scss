@@ -20,7 +20,7 @@
     margin-left: 15px;
     font-size: 0.7em;
     font-weight: 300;
-    color: red;
+    color: $colorError;
   }
   &__email,
   &__name,
@@ -44,20 +44,35 @@
     margin-bottom: 5px;
     display: block;
   }
-  &__name {
+  &__title-error {
+    color: $colorError;
   }
   &__name-error {
-    border-bottom: 2px solid rgb(235, 70, 70);
+    border-bottom: 2px solid $colorError;
     &:focus {
-      border-bottom: 2px solid rgb(235, 70, 70);
+      border-bottom: 2px solid $colorError;
     }
-  }
-  &__email {
   }
   &__description {
     font-size: 1.3em;
     overflow: hidden;
+    margin-bottom: 10px;
   }
   &__button {
+    align-self: flex-end;
+    padding: 15px 40px;
+    transition: $transition;
+    background-color: $colorBorderMyPhoto;
+    box-shadow: 0 0 0 4px $colorBorderMyPhoto, 0 0 0 8px #000;
+    font-weight: 600;
+    font-size: 1.1em;
+    letter-spacing: 0.2em;
+    color: #000;
+    text-shadow: 1px 0 0 snow, -1px 0 0 snow, 0 1px 0 snow, 0 -1px 0 snow;
+    &:hover {
+      border-radius: 1px;
+      font-size: 1.09em;
+      box-shadow: 0 0 0 4px #000, 0 0 0 8px $colorBorderMyPhoto;
+    }
   }
 }

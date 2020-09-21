@@ -29,8 +29,8 @@ const initialState: InitialStateType = {
         { key: 'Experience', value: '1 year', id: v4() },
         { key: 'Langages', value: 'Russion, English', id: v4() },
         { key: 'Email', value: 'mirudistok32@gmail.com', id: v4() },
-        { key: 'Vk', value: 'https://vk.com/mirudistok', id: v4() },
-        { key: 'Telegram', value: 'https://t.me/mirudistok', id: v4() }
+        // { key: 'Vk', value: 'https://vk.com/mirudistok', id: v4() },
+        // { key: 'Telegram', value: 'https://t.me/mirudistok', id: v4() }
     ],
     listSkillsDates: [
         { title: '<React />', backgroundColor: 'dodgerblue', id: v4() },
