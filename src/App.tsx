@@ -6,7 +6,7 @@ import { Home } from './components//pages/Home/Home';
 import { ErrorPath } from './components/utils/ErrorPath/ErrorPath'
 import { ContainerNavigation } from './components/Navigation/ContainerNavigation';
 import ContainerAbout from './components/pages/About/ContainerAbout';
-import { Contact } from './components/pages/Contact/Contact';
+import ContainerContact from './components/pages/Contact/ContainerContact';
 import ContainerPortfolio from './components/pages/Portfolio/ContainerPortfolio';
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
             <Route exact path={PATH.home} render={() => <Home />} />
             <Route exact path={PATH.about} render={() => <ContainerAbout />} />
             <Route exact path={PATH.portfolio} render={() => <ContainerPortfolio />} />
-            <Route exact path={PATH.contact} render={() => <Contact />} />
+            <Route exact path={PATH.contact} render={() => <ContainerContact />} />
             <Route render={() => <ErrorPath children={'Error path!'} />} />
           </Switch>
         </div>

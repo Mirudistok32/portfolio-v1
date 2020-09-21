@@ -2,7 +2,6 @@ import { getIdChat, instance } from './api-settings';
 
 
 
-
 export const sendMessagesApi = {
     sendMessage: (message: string) => {
         return instance.post(`sendMessage?chat_id=${getIdChat()}text=${message}`)
@@ -12,10 +11,11 @@ export const sendMessagesApi = {
                 } else if (data.statusText !== 'OK') {
                     throw Error('data.statusText !== `OK`')
                 }
+                return data.data
             })
             .catch(e => {
                 console.log('Ошибка в POST запросе, в sendMessagesApi метода sendMessage')
                 console.log("Ошибка/Error: " + e)
             })
-    }
+    },
 }
