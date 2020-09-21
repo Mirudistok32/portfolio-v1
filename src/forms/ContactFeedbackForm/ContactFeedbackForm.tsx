@@ -32,6 +32,7 @@ export const ContactFeedbackForm: React.FC<PropsType> = React.memo((props) => {
             .max(maxLinkLength, `Max count symbols ${maxLinkLength}`),
         description: Yup
             .string()
+            .required()
             .max(maxDescriptionLength, `Max count symbols ${maxDescriptionLength}`)
     })
 
@@ -103,7 +104,7 @@ export const ContactFeedbackForm: React.FC<PropsType> = React.memo((props) => {
                 }
             </label>
             <label className={s.form__row}>
-                <span className={s.form__title}>Your Comment</span>
+                <span className={s.form__title + ` ${formik.errors.description ? s['form__description-error'] : ''}`}>Your Comment</span>
                 <textarea
                     className={s.form__description}
                     name="description"
