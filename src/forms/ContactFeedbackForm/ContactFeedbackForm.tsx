@@ -1,6 +1,6 @@
 import { FormikConfig, useFormik } from 'formik'
 import * as Yup from 'yup'
-import React, { ChangeEvent, useState } from 'react'
+import React, { ChangeEvent, FocusEvent, UIEvent, useState } from 'react'
 import s from './ContactFeedbackForm.module.scss'
 
 export type ContactFeedbackFormInitialValuesType = {
@@ -13,7 +13,7 @@ type PropsType = {
     onSubmit: (values: ContactFeedbackFormInitialValuesType) => void
 }
 
-export const ContactFeedbackForm: React.FC<PropsType> = (props) => {
+export const ContactFeedbackForm: React.FC<PropsType> = React.memo((props) => {
 
     const { onSubmit } = props
 
@@ -53,6 +53,25 @@ export const ContactFeedbackForm: React.FC<PropsType> = (props) => {
         formik.handleChange(e)
     }
 
+    //Ничего умнее не придумал()
+    const onScrollHandler = (e: UIEvent<HTMLTextAreaElement>) => {
+
+        const scrollHeight = e.currentTarget.scrollHeight
+        let height = +e.currentTarget.style.height
+
+        if (scrollHeight > height) {
+            height += (scrollHeight - height)
+            e.currentTarget.style.minHeight = `${height}px`
+        }
+    }
+    const onBluerHandler = (e: FocusEvent<HTMLTextAreaElement>) => {
+        const value = e.currentTarget.value
+
+        if (value.trim() === "") {
+            e.currentTarget.style.minHeight = `50px`
+        }
+    }
+
     return (
         <form className={s.form} onSubmit={formik.handleSubmit}>
             <label className={s.form__row}>
@@ -88,12 +107,18 @@ export const ContactFeedbackForm: React.FC<PropsType> = (props) => {
                 <textarea
                     className={s.form__description}
                     name="description"
+                    onBlur={(e) => onBluerHandler(e)}
+                    onScroll={(e) => onScrollHandler(e)}
                     onChange={(e) => onChangeHandlerTextarea(e)}
                     value={formik.values.description}
                 />
+                {
+                    formik.errors.description &&
+                    <span className={s['form__row-error']}>*{formik.errors.description}</span>
+                }
             </label>
 
             <button className={s.form__button} type="submit">Send</button>
         </form>
     )
-}
+})
