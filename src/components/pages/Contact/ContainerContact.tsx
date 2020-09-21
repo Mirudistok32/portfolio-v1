@@ -14,7 +14,7 @@ const ContainerContact: React.FC<PropsType> = React.memo((props) => {
         dispatch(sendMessagesInTelegramChatThunk(message))
     }
 
-    return <Contact />
+    return <Contact sendMessage={sendMessage}/>
 })
 
 

@@ -43,8 +43,8 @@ export const actionsContactReducer = {
 export const sendMessagesInTelegramChatThunk = (message: string): ThunkType => {
     return async (dispatch) => {
         dispatch(actionsContactReducer.setIsLoadingAC(true))
-        const statusData = await sendMessagesApi.sendMessage(message)
-        console.log(statusData.data)
+        await sendMessagesApi.sendMessage(message)
+        // console.log(statusData.data)
         dispatch(actionsContactReducer.setIsLoadingAC(true))
     }
 }
