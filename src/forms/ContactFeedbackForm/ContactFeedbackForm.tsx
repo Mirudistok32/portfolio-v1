@@ -1,6 +1,6 @@
 import { FormikConfig, useFormik } from 'formik'
 import * as Yup from 'yup'
-import React, { ChangeEvent, FocusEvent, UIEvent, useState } from 'react'
+import React, { ChangeEvent, FocusEvent, UIEvent } from 'react'
 import s from './ContactFeedbackForm.module.scss'
 
 export type ContactFeedbackFormInitialValuesType = {

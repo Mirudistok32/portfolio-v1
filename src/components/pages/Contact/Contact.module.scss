@@ -12,7 +12,7 @@
   }
   &__mainlinks {
     @include flexJustifyAlignDirection(center, start, column);
-    
+
     padding: 40px 100px;
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.6);
@@ -46,7 +46,5 @@
         background-color: rgba($colorBorderMyPhoto, $alpha: 0.5);
       }
     }
-  }
-  &__form {
   }
 }
