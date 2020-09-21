@@ -27,10 +27,11 @@ export const ContactFeedbackForm: React.FC<PropsType> = (props) => {
             email: "",
             description: ""
         },
-        onSubmit: (values) => {
+        onSubmit: (values, {resetForm}) => {
             onSubmit(values)
+            resetForm()
         },
-        validationSchema: validationSchemaYup
+        validationSchema: validationSchemaYup,
     }
     const formik = useFormik(formikConfig)
 
