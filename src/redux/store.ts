@@ -1,7 +1,8 @@
 import { portfolioReducer } from './reducers/portfolio-reducer';
-import { combineReducers, createStore } from "redux";
+import { applyMiddleware, combineReducers, createStore } from "redux";
 import { navigationReducer } from './reducers/navigation-reducer'
 import { aboutReducer } from './reducers/about-reducer'
+import thunk from 'redux-thunk';
 
 const rootReducers = combineReducers({
     navigationReducer,
@@ -17,6 +18,6 @@ export type InferActionsTypes<T extends { [key: string]: (...args: any[]) => any
 
 
 
-const store = createStore(rootReducers)
+const store = createStore(rootReducers, applyMiddleware(thunk))
 
 export default store
