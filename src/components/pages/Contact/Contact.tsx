@@ -18,7 +18,7 @@ export const Contact: React.FC<PropsType> = React.memo((props) => {
             headers: {
                 'Content-Type': 'application/json;charset=utf-8'
             }
-        })
+        }).then(d => console.log(d))
     }
 
     return (
