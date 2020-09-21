@@ -1,6 +1,6 @@
 import React from 'react'
 import { TitleHeader } from '../../TitleHeader/TitleHeader'
-import { ContactFeedbackForm } from '../../../forms/ContactFeedbackForm'
+import { ContactFeedbackForm } from '../../../forms/ContactFeedbackForm/ContactFeedbackForm'
 import s from './Contact.module.scss'
 
 
