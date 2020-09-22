@@ -1,16 +1,29 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { TitleHeader } from '../../TitleHeader/TitleHeader'
 import { ContactFeedbackForm, ContactFeedbackFormInitialValuesType } from '../../../forms/ContactFeedbackForm/ContactFeedbackForm'
 import s from './Contact.module.scss'
+import { ContantElementType } from '../../../redux/reducers/contact-reducer'
 
 
 type PropsType = {
     onSubmitContactFeedbackForm: (values: ContactFeedbackFormInitialValuesType) => void
+    contactElements: Array<ContantElementType>
 }
 
 export const Contact: React.FC<PropsType> = React.memo((props) => {
 
-    const { onSubmitContactFeedbackForm } = props
+    const { onSubmitContactFeedbackForm, contactElements } = props
+
+    const renderContactElements = useMemo(() => contactElements.map((element) => {
+        return (
+            <li key={element.id} className={s.contact__link}>
+                <span className={s['contact__link-span']}>{element.title}</span>
+                <a href={element.link} className={s['contact__link-a']} target="_blank" rel="noopener noreferrer">
+                    {element.linkTitle}
+                </a>
+            </li>
+        )
+    }), [contactElements])
 
     return (
         <div className={s.contact}>
@@ -21,42 +34,9 @@ export const Contact: React.FC<PropsType> = React.memo((props) => {
                 />
                 <div className={s.contact__content}>
                     <ul className={s.contact__mainlinks}>
-                        <li className={s.contact__link}>
-                            <span className={s['contact__link-span']}>Telegram</span>
-                            <a href={'https://t.me/mirudistok'} className={s['contact__link-a']} target="_blank" rel="noopener noreferrer">
-                                t.me/mirudistok
-                            </a>
-                        </li>
-                        <li className={s.contact__link}>
-                            <span className={s['contact__link-span']}>Vk</span>
-                            <a href={'https://vk.com/mirudistok'} className={s['contact__link-a']} target="_blank" rel="noopener noreferrer">
-                                vk.com/mirudistok
-                            </a>
-                        </li>
-                        <li className={s.contact__link}>
-                            <span className={s['contact__link-span']}>Instagram</span>
-                            <a href={' https://www.instagram.com/postnikov_st/'} className={s['contact__link-a']} target="_blank" rel="noopener noreferrer">
-                                instagram.com/postnikov_st/
-                            </a>
-                        </li>
-                        <li className={s.contact__link}>
-                            <span className={s['contact__link-span']}>Linkedin</span>
-                            <a href={'https://www.linkedin.com/in/stanislav-postnikov-6220331b7/'} className={s['contact__link-a']} target="_blank" rel="noopener noreferrer">
-                                linkedin.com/in/stanislav-postnikov-6220331b7/
-                            </a>
-                        </li>
-                        <li className={s.contact__link}>
-                            <span className={s['contact__link-span']}>Twitter</span>
-                            <a href={'https://twitter.com/postnikov_st'} className={s['contact__link-a']} target="_blank" rel="noopener noreferrer">
-                                https://twitter.com/postnikov_st
-                            </a>
-                        </li>
-                        <li className={s.contact__link}>
-                            <span className={s['contact__link-span']}>GutHub</span>
-                            <a href={'https://github.com/mirudistok32'} className={s['contact__link-a']} target="_blank" rel="noopener noreferrer">
-                                github.com/mirudistok32
-                            </a>
-                        </li>
+                        {
+                            renderContactElements
+                        }
                     </ul>
                     <div className={s.contact__form}>
                         <div className={s['contact__form-title']}>
