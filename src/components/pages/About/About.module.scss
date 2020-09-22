@@ -200,3 +200,15 @@
     }
   }
 }
+@media (max-width: 750px) {
+  .about {
+    &__skills-contents-element {
+      @include fontPoppins(700);
+      font-size: 1em;
+      margin: 5px;
+      padding: 15px;
+      transform: skewX(-15deg);
+      letter-spacing: 0.2em;
+    }
+  }
+}
