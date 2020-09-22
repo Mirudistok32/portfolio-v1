@@ -16,3 +16,10 @@
     @include fontPoppins(300);
   }
 }
+@media (max-width: 890px) {
+  .title{
+    &__text {
+      font-size: 1em;
+    }
+  }
+}

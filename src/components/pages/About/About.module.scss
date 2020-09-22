@@ -157,6 +157,7 @@
     &__info-photo {
       height: 20em;
       box-shadow: 0 0 0 5px $colorBorderMyPhoto;
+      border-radius: 1px;
       &::after {
         top: 0;
         left: 0;
@@ -174,6 +175,28 @@
       & > li {
         max-width: calc(#{$maxWidthInfoDataList / 2} - 90px);
       }
+    }
+  }
+}
+@media (max-width: 890px) {
+  .about {
+    &__info-wrap {
+      flex-direction: column;
+    }
+    &__info-photo {
+      height: 14em;
+      margin-bottom: 45px;
+    }
+    &__info-data-list {
+      max-width: calc(#{$maxWidthInfoDataList - 40px});
+      & > li {
+        max-width: calc(#{$maxWidthInfoDataList / 2} - 40px);
+      }
+    }
+    &__line {
+      max-width: 650px;
+      margin-top: calc(#{$marginTopBottomAboutLine - 15px});
+      margin-bottom: calc(#{$marginTopBottomAboutLine - 10px});
     }
   }
 }

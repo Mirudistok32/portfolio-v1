@@ -8,3 +8,8 @@
     color: $colorBorderMyPhoto;
   }
 }
+@media (max-width: 890px) {
+  .title {
+    font-size: 4.5em;
+  }
+}

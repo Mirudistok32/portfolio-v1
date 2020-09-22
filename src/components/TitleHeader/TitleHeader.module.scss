@@ -4,3 +4,8 @@
   flex-direction: column;
   align-items: center;
 }
+@media (max-width: 890px){
+  .title{
+    margin-bottom: 50px;
+  }
+}
