@@ -2,14 +2,60 @@ import { AppStateType } from './../store';
 import { ThunkAction } from "redux-thunk"
 import { sendMessagesApi } from "../../api/send-messages-api"
 import { InferActionsTypes } from "../store"
+import { v4 } from 'uuid';
 
+export type ContantElementType = {
+    id: string
+    title: string
+    link: string
+    linkTitle: string
+}
 
 type InitialStateType = {
     isLoading: boolean
+    contactElements: Array<ContantElementType>
 }
 
 const initialState: InitialStateType = {
-    isLoading: false
+    isLoading: false,
+    contactElements: [
+        {
+            id: v4(),
+            title: "Telegram",
+            linkTitle: "t.me/mirudistok",
+            link: "https://t.me/mirudistok",
+        },
+        {
+            id: v4(),
+            title: "Vk",
+            linkTitle: "vk.com/mirudistok",
+            link: "https://vk.com/mirudistok",
+        },
+        {
+            id: v4(),
+            title: "Instagram",
+            linkTitle: "instagram.com/postnikov_st/",
+            link: "https://www.instagram.com/postnikov_st/",
+        },
+        {
+            id: v4(),
+            title: "Linkedin",
+            linkTitle: "linkedin.com/in/stanislav-postnikov-6220331b7/",
+            link: "https://www.linkedin.com/in/stanislav-postnikov-6220331b7/",
+        },
+        {
+            id: v4(),
+            title: "Twitter",
+            linkTitle: "https://twitter.com/postnikov_st",
+            link: "https://twitter.com/postnikov_st",
+        },
+        {
+            id: v4(),
+            title: "GutHub",
+            linkTitle: "github.com/mirudistok32",
+            link: "https://github.com/mirudistok32",
+        },
+    ],
 }
 
 
