@@ -18,7 +18,8 @@
     letter-spacing: 0.05em;
   }
   &__element-wrap {
-    width: $maxWidthContent;
+    max-width: $maxWidthContent;
+    width: 100%;
     @include flexJustifyAlignDirection(space-between);
   }
   &__element-info {
@@ -31,8 +32,10 @@
     justify-content: center;
     align-items: center;
     width: 50%;
-    height: $heightCanvas;
-    box-shadow: 0 0 0 5px $colorBorderMyPhoto, inset 0 0 100px 0 #000, inset 0 0 10px 5px #000;
+    min-height: $heightCanvas;
+    height: 100%;
+    box-shadow: 0 0 0 5px $colorBorderMyPhoto, inset 0 0 100px 0 #000,
+      inset 0 0 10px 5px #000;
     border-radius: 5px;
     padding: 0 10px;
     background-color: #000;
@@ -40,6 +43,33 @@
       height: 100%;
       width: 100%;
       border-style: none;
+    }
+  }
+}
+@media (max-width: 1050px) {
+  .portfolio {
+    &__element {
+      padding-bottom: 50px;
+      margin-bottom: 40px;
+    }
+    &__element-wrap {
+      @include flexJustifyAlignDirection(center, center, column);
+    }
+    &__element-canvas {
+      width: 100%;
+      min-height: $heightCanvas;
+      height: 100%;
+      padding: 0px;
+      box-shadow: 0 0 0 3px $colorBorderMyPhoto, inset 0 0 100px 0 #000,
+        inset 0 0 10px 5px #000;
+    }
+    &__element-title {
+      margin-bottom: 10px;
+    }
+    &__element-info {
+      padding: 20px 5px;
+      width: 100%;
+      margin-bottom: 20px;
     }
   }
 }
