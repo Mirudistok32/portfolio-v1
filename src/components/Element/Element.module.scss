@@ -10,7 +10,6 @@
   color: $colorInfoDataElementKeyOrTitle;
   line-height: 1.5em;
   letter-spacing: 0.02em;
-  // background-color: lightcoral;
 
   span {
     text-align: left;
@@ -26,6 +25,20 @@
     transition: $transition;
     &:hover {
       background-color: #2d2d2d;
+    }
+  }
+}
+@media (max-width: 980px) {
+  .element {
+    padding: 15px 0px;
+    font-size: 1em;
+    line-height: 1em;
+    letter-spacing: 0.02em;
+    span {
+      margin-left: 10px;
+    }
+    a {
+      margin-left: 10px;
     }
   }
 }
