@@ -60,3 +60,8 @@
     margin-bottom: 50px;
   }
 }
+@media (max-width: 515px) {
+  .contact {
+    @include paddingForPages(30px, 30px);
+  }
+}

@@ -20,3 +20,8 @@
     margin-bottom: 100px;
   }
 }
+@media (max-width: 515px) {
+  .portfolio {
+    @include paddingForPages(30px, 30px);
+  }
+}

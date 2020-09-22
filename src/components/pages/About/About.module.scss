@@ -227,6 +227,7 @@
 }
 @media (max-width: 515px) {
   .about {
+    @include paddingForPages(30px, 30px);
     &__info-data-list {
       & > li {
         max-width: calc(#{$maxWidthInfoDataList / 2} - 60px);
