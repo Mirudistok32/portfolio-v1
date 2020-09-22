@@ -7,7 +7,7 @@
   box-shadow: 0 0 0 10px $colorBorderMyPhoto;
   border-radius: 50%;
   transition: $transition;
-  &:hover{
+  &:hover {
     box-shadow: 0 0 0 10px $colorBorderMyPhotoHover;
   }
   &__link {
@@ -31,5 +31,17 @@
     display: block;
     background-color: #000;
     position: relative;
+  }
+}
+@media (max-width: 500px) {
+  .image {
+    box-shadow: 0 0 0 5px $colorBorderMyPhotoHover;
+    &:hover {
+      box-shadow: 0 0 0 5px $colorBorderMyPhotoHover;
+    }
+    &__photo {
+      max-height: 150px;
+      max-width: 150px;
+    }
   }
 }

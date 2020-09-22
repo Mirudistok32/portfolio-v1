@@ -43,7 +43,7 @@ const initialState: InitialStateType = {
                 },
                 {
                     keyTitle: "Description",
-                    valueTitle: "ClickMeGame - это мини игра, цель которой узнать, сколько вы успеете кликнуть по кнопке 'Click' за 10 секунд",
+                    valueTitle: "ClickMeGame - это мини-игра, цель которой узнать, сколько вы успеете кликнуть по кнопке 'Click' за 10 секунд",
                     id: v4(),
                 },
                 {

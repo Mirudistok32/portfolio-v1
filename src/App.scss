@@ -27,3 +27,19 @@
     text-align: center;
   }
 }
+@media (max-width: 940px) {
+  .app {
+    background: none;
+    &__wrap {
+      box-shadow: inset 0 0 1120px 5px #000;
+    }
+  }
+}
+@media (max-width: 940px) {
+  .app {
+    background: none;
+    &__wrap {
+      box-shadow: inset 0 0 1120px 5px #000;
+    }
+  }
+}
