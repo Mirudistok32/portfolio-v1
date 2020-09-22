@@ -1,8 +1,9 @@
 import React, { useCallback } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { Contact } from './Contact'
 import { sendMessagesInTelegramChatThunk } from '../../../redux/reducers/contact-reducer'
 import { ContactFeedbackFormInitialValuesType } from '../../../forms/ContactFeedbackForm/ContactFeedbackForm'
+import { getContactArrayElements } from '../../../redux/selectors/contact-selector'
 
 type PropsType = {
 
@@ -11,6 +12,7 @@ type PropsType = {
 const ContainerContact: React.FC<PropsType> = React.memo((props) => {
 
     const dispatch = useDispatch()
+    const contactElements = useSelector(getContactArrayElements)
     const sendMessage = useCallback((message: string) => {
         dispatch(sendMessagesInTelegramChatThunk(message))
     }, [dispatch])
@@ -25,7 +27,10 @@ const ContainerContact: React.FC<PropsType> = React.memo((props) => {
 
     }, [sendMessage])
 
-    return <Contact onSubmitContactFeedbackForm={getDataFromForm} />
+    return <Contact
+        onSubmitContactFeedbackForm={getDataFromForm}
+        contactElements={contactElements}
+    />
 })
 
 
