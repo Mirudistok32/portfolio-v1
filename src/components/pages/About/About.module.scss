@@ -212,3 +212,13 @@
     }
   }
 }
+@media (max-width: 635px) {
+  .about {
+    &__info-data-list {
+      max-width: $maxWidthInfoDataList;
+      & > li {
+        width: calc(#{$maxWidthInfoDataList / 2} - 50px);
+      }
+    }
+  }
+}
