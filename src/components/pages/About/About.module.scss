@@ -38,7 +38,6 @@
   &__info-data {
     padding: 3px;
   }
-
   &__info-data-list {
     max-width: $maxWidthInfoDataList;
     display: flex;
@@ -103,6 +102,31 @@
 }
 @media (max-width: 1200px) {
   .about {
+    &__info-wrap {
+      padding: 0 30px;
+    }
+    &__info-photo {
+      height: 23em;
+      &::after {
+        top: $topLeftPositionInfoPhoto;
+        left: $topLeftPositionInfoPhoto;
+      }
+      img {
+        position: relative;
+        top: $topLeftPositionInfoPhoto;
+        left: $topLeftPositionInfoPhoto;
+      }
+      margin-right: 25px;
+    }
+    &__info-data {
+      padding: 3px;
+    }
+    &__info-data-list {
+      max-width: calc(#{$maxWidthInfoDataList - 50px});
+      & > li {
+        max-width: calc(#{$maxWidthInfoDataList / 2} - 50px);
+      }
+    }
     &__line {
       &::before {
         left: calc(#{-$changePositionAboutLine + 90px});
@@ -118,7 +142,7 @@
     &__line {
       margin: 0 auto;
       max-width: 700px;
-      margin-top: calc(#{$marginTopBottomAboutLine - 100px});
+      margin-top: calc(#{$marginTopBottomAboutLine - 10px});
       margin-bottom: calc(#{$marginTopBottomAboutLine - 10px});
     }
   }
