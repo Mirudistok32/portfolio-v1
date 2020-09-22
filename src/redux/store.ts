@@ -2,12 +2,14 @@ import { portfolioReducer } from './reducers/portfolio-reducer';
 import { applyMiddleware, combineReducers, createStore } from "redux";
 import { navigationReducer } from './reducers/navigation-reducer'
 import { aboutReducer } from './reducers/about-reducer'
+import { contactReducer } from './reducers/contact-reducer'
 import thunk from 'redux-thunk';
 
 const rootReducers = combineReducers({
     navigationReducer,
     aboutReducer,
-    portfolioReducer
+    portfolioReducer,
+    contactReducer
 })
 
 type RootReducersType = typeof rootReducers
