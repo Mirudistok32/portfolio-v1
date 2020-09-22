@@ -32,9 +32,10 @@
     align-items: center;
     width: 50%;
     height: $heightCanvas;
-    box-shadow: 0 0 0 5px $colorBorderMyPhoto, inset 0 0 100px 0 #000;
+    box-shadow: 0 0 0 5px $colorBorderMyPhoto, inset 0 0 100px 0 #000, inset 0 0 10px 5px #000;
     border-radius: 5px;
-    padding: 1px;
+    padding: 0 10px;
+    background-color: #000;
     iframe {
       height: 100%;
       width: 100%;

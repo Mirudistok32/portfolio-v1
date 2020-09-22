@@ -19,34 +19,4 @@
     box-shadow: 4px 13px 16px -5px #000000;
     margin-bottom: 100px;
   }
-  &__element-title {
-    @include fontUbuntu;
-    font-size: 3.5em;
-    margin-bottom: 50px;
-    letter-spacing: 0.05em;
-  }
-  &__element-wrap {
-    width: $maxWidthContent;
-    @include flexJustifyAlignDirection(space-between);
-  }
-  &__element-info {
-    padding: 20px 5px;
-    width: 50%;
-    font-size: 0.9em;
-  }
-  &__element-canvas {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: $heightCanvas;
-    box-shadow: 0 0 0 5px $colorBorderMyPhoto, inset 0 0 100px 0 #000;
-    border-radius: 5px;
-    padding: 1px;
-    iframe {
-      height: 100%;
-      width: 100%;
-      border-style: none;
-    }
-  }
 }
