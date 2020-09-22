@@ -42,3 +42,17 @@
     }
   }
 }
+@media (max-width: 515px) {
+  .element {
+    padding: 15px 0px;
+    font-size: 0.9em;
+    line-height: 0.9em;
+    letter-spacing: 0.02em;
+    span {
+      margin-left: 5px;
+    }
+    a {
+      margin-left: 5px;
+    }
+  }
+}

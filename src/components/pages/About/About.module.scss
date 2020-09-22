@@ -217,8 +217,23 @@
     &__info-data-list {
       max-width: $maxWidthInfoDataList;
       & > li {
-        width: calc(#{$maxWidthInfoDataList / 2} - 50px);
+        max-width: calc(#{$maxWidthInfoDataList / 2} - 50px);
       }
+    }
+    &__info-wrap {
+      padding: 0px;
+    }
+  }
+}
+@media (max-width: 515px) {
+  .about {
+    &__info-data-list {
+      & > li {
+        max-width: calc(#{$maxWidthInfoDataList / 2} - 60px);
+      }
+    }
+    &__skills-contents-element {
+      padding: 10px;
     }
   }
 }
