@@ -35,7 +35,7 @@ export const Portfolio: React.FC<PropsType> = React.memo((props) => {
                 />
                 <div className={s.portfolio__content}>
                     {
-                        renderElements
+                        // renderElements
                     }
                 </div>
             </div>

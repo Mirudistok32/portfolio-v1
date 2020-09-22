@@ -35,7 +35,7 @@ export const About: React.FC<PropsType> = React.memo((props) => {
             <div className={s.about__wrap}>
                 <TitleHeader title={'About Me'} subtitle={'Today you make the code, tomorrow the code makes you money'} />
                 <div className={s['about__info-wrap']}>
-                    <div className={s['about__info-photo']}>
+                    {/* <div className={s['about__info-photo']}>
                         <img src={myPhoto} alt="" />
                     </div>
                     <div className={s['about__info-data']}>
@@ -44,7 +44,7 @@ export const About: React.FC<PropsType> = React.memo((props) => {
                                 renderInfoDates
                             }
                         </ul>
-                    </div>
+                    </div> */}
                 </div>
                 <div className={s.about__line}></div>
                 {/* <div className={s['about__description-wrap']}>

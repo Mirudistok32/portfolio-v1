@@ -101,3 +101,25 @@
     box-shadow: 0 0 2px 1px #000;
   }
 }
+@media (max-width: 1200px) {
+  .about {
+    &__line {
+      &::before {
+        left: calc(#{-$changePositionAboutLine + 90px});
+      }
+      &::after {
+        right: calc(#{-$changePositionAboutLine + 90px});
+      }
+    }
+  }
+}
+@media (max-width: 1020px) {
+  .about {
+    &__line {
+      margin: 0 auto;
+      max-width: 700px;
+      margin-top: calc(#{$marginTopBottomAboutLine - 100px});
+      margin-bottom: calc(#{$marginTopBottomAboutLine - 10px});
+    }
+  }
+}
