@@ -24,6 +24,11 @@ export const Navigation: React.FC<PropsType> = React.memo((props) => {
 
     // Выводим список элементов
     const elements = useMemo(() => navElements.map(item => {
+
+        const onClickHandler = () => {
+            toggleOpenNavList(!isOpen)
+        }
+
         return (
             <li
                 key={v4()}
@@ -32,12 +37,13 @@ export const Navigation: React.FC<PropsType> = React.memo((props) => {
                     className={listElementClass.join(' ')}
                     to={item.link}
                     activeClassName={s['navigation__list-element-active']}
+                    onClick={onClickHandler}
                 >
                     {item.title.toLocaleUpperCase()}
                 </NavLink>
             </li>
         )
-    }), [listElementClass, navElements])
+    }), [listElementClass, navElements, toggleOpenNavList, isOpen])
 
     // Функции и колбэки
     const onClickDownArrowHandler = () => {
