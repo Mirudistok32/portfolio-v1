@@ -23,3 +23,10 @@
     }
   }
 }
+@media (max-width: 500px) {
+  .title{
+    &__text {
+      font-size: 0.9em;
+    }
+  }
+}

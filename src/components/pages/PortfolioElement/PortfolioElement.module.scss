@@ -73,3 +73,38 @@
     }
   }
 }
+@media (max-width: 500px) {
+  .portfolio {
+    &__element-title {
+      font-size: 3em;
+    }
+  }
+}
+@media (max-width: 414px) {
+  .portfolio {
+    &__element-title {
+      margin-bottom: 0px;
+    }
+    &__element {
+      max-width: 400px;
+      box-shadow: 4px 13px 16px -5px #000000, 0 0 5px 1px #fff;
+    }
+  }
+}
+@media (max-width: 375px) {
+  .portfolio {
+    &__element {
+      max-width: 370px;
+    }
+    &__element-title {
+      font-size: 2.6em;
+    }
+  }
+}
+@media (max-width: 320px) {
+  .portfolio {
+    &__element {
+      max-width: 315px;
+    }
+  }
+}
