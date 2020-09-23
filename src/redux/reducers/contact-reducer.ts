@@ -34,7 +34,7 @@ const initialState: InitialStateType = {
         {
             id: v4(),
             title: "Instagram",
-            linkTitle: "instagram.com/postnikov_st/",
+            linkTitle: "instagram.com/postnikov_st",
             link: "https://www.instagram.com/postnikov_st/",
         },
         {
