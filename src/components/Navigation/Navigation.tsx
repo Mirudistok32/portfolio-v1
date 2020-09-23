@@ -26,7 +26,7 @@ export const Navigation: React.FC<PropsType> = React.memo((props) => {
     const elements = useMemo(() => navElements.map(item => {
 
         const onClickHandler = () => {
-            toggleOpenNavList(!isOpen)
+            toggleOpenNavList(false)
         }
 
         return (
