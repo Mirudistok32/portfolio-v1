@@ -5,7 +5,7 @@
 }
 
 @mixin paddingForPages($top: 60px, $bottom: 50px) {
-  padding: 0 20px;
+  padding: 0 0px;
   padding-top: $top;
   padding-bottom: $bottom;
 }
