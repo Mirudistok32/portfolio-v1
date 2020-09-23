@@ -58,6 +58,7 @@
   }
   &__button {
     align-self: flex-end;
+    margin-left: 10px;
     padding: 15px 40px;
     transition: $transition;
     background-color: $colorBorderMyPhoto;
@@ -92,6 +93,32 @@
   .form {
     &__row {
       min-width: calc(#{$widthSectionMainLinks - 100px});
+    }
+  }
+}
+@media (max-width: 500px) {
+  .form {
+    &__row {
+      min-width: calc(#{$widthSectionMainLinks - 150px});
+    }
+    &__button {
+      font-size: 1em;
+      padding: 15px 30px;
+      align-self: start;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .form {
+    &__row {
+      min-width: calc(#{$widthSectionMainLinks - 210px});
+    }
+  }
+}
+@media (max-width: 320px) {
+  .form {
+    &__row {
+      min-width: calc(#{$widthSectionMainLinks - 250px});
     }
   }
 }

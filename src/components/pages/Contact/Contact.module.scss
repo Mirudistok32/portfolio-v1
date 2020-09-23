@@ -110,3 +110,70 @@
     }
   }
 }
+@media (max-width: 480px) {
+  .contact {
+    &__mainlinks {
+      padding: 40px 10px;
+    }
+    &__form {
+      padding: 40px 10px;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .contact {
+    padding: 0px;
+    &__link {
+      &-span {
+        max-width: calc(#{$widthSectionMainLinks / 2} - 160px);
+      }
+      &-a {
+        font-size: 0.9em;
+        padding: 1px;
+      }
+    }
+    &__mainlinks {
+      padding: 10px;
+    }
+    &__form {
+      padding: 10px;
+    }
+  }
+}
+@media (max-width: 340px) {
+  .contact {
+    &__link {
+      flex-direction: column;
+      align-items: start;
+      padding-left: 30px;
+      &-span {
+        margin-bottom: 5px;
+      }
+      &-a {
+        font-size: 0.9em;
+        padding: 1px;
+        margin: 1px;
+        margin-left: 20px;
+      }
+    }
+    &__form-title {
+      margin-bottom: 40px;
+    }
+    &__mainlinks {
+      max-width: 300px;
+    }
+    &__form {
+      max-width: 300px;
+    }
+  }
+}
+@media (max-width: 300px) {
+  .contact {
+    &__mainlinks {
+      max-width: 280px;
+    }
+    &__form {
+      max-width: 280px;
+    }
+  }
+}
