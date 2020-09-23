@@ -51,7 +51,7 @@ const initialState: InitialStateType = {
         },
         {
             id: v4(),
-            title: "GutHub",
+            title: "GitHub",
             linkTitle: "github.com/mirudistok32",
             link: "https://github.com/mirudistok32",
         },

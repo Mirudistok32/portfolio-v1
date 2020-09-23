@@ -11,9 +11,3 @@
     @include flexJustifyAlignDirection(center, center, column);
   }
 }
-@media (max-width: 515px) {
-  .portfolio {
-    @include paddingForPages(30px, 30px);
-  }
-}
-

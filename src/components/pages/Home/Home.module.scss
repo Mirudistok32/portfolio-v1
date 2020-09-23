@@ -70,11 +70,6 @@
     }
   }
 }
-@media (max-width: 515px) {
-  .home {
-    @include paddingForPages(30px, 30px);
-  }
-}
 @media (max-width: 500px) {
   .home {
     padding: 0 20px;

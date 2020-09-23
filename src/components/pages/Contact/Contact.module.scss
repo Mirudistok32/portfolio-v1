@@ -4,7 +4,6 @@
 .contact {
   @include forAllPages;
   @include paddingForPages;
-  padding: 0 20px;
   &__wrap {
     @include flexJustifyAlignDirection(center, center, column);
   }
@@ -92,11 +91,6 @@
     }
   }
 }
-@media (max-width: 515px) {
-  .contact {
-    @include paddingForPages(30px, 30px);
-  }
-}
 @media (max-width: 500px) {
   .contact {
     &__link {
@@ -122,7 +116,6 @@
 }
 @media (max-width: 400px) {
   .contact {
-    padding: 0px;
     &__link {
       &-span {
         max-width: calc(#{$widthSectionMainLinks / 2} - 160px);

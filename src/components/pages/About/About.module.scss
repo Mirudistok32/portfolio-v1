@@ -227,7 +227,6 @@
 }
 @media (max-width: 515px) {
   .about {
-    @include paddingForPages(30px, 30px);
     &__info-data-list {
       justify-content: center;
       & > li {

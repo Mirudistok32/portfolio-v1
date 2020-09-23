@@ -17,8 +17,6 @@ export const DownArrowSVG: React.FC<PropsType> = React.memo((props) => {
         colorArrow = '#FAFAFA',
         colorBody = '#2196F3',
         onClick,
-        height,
-        weigth,
         classNameForArrow,
         classNameForBody
     } = props
@@ -45,8 +43,6 @@ export const DownArrowSVG: React.FC<PropsType> = React.memo((props) => {
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 490.667 490.667"
-            height={height}
-            width={weigth}
         >
             <path
                 className={classBody.join('')}
