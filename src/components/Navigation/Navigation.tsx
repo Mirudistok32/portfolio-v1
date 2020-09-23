@@ -43,7 +43,7 @@ export const Navigation: React.FC<PropsType> = React.memo((props) => {
                 </NavLink>
             </li>
         )
-    }), [listElementClass, navElements, toggleOpenNavList, isOpen])
+    }), [listElementClass, navElements, toggleOpenNavList])
 
     // Функции и колбэки
     const onClickDownArrowHandler = () => {
