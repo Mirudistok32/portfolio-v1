@@ -74,3 +74,24 @@
     }
   }
 }
+@media (max-width: 720px) {
+  .form {
+    &__row {
+      min-width: calc(#{$widthSectionMainLinks - 50px});
+    }
+  }
+}
+@media (max-width: 610px) {
+  .form {
+    &__row {
+      min-width: calc(#{$widthSectionMainLinks - 100px});
+    }
+  }
+}
+@media (max-width: 525px) {
+  .form {
+    &__row {
+      min-width: calc(#{$widthSectionMainLinks - 100px});
+    }
+  }
+}

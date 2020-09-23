@@ -4,6 +4,7 @@
 .contact {
   @include forAllPages;
   @include paddingForPages;
+  padding: 0 20px;
   &__wrap {
     @include flexJustifyAlignDirection(center, center, column);
   }
@@ -30,7 +31,8 @@
       font-size: 1.3em;
       font-weight: 300;
       color: rgba(255, 250, 250, 0.534);
-      width: calc(#{$widthSectionMainLinks / 2} - 60px);
+      max-width: calc(#{$widthSectionMainLinks / 2} - 60px);
+      width: 100%;
     }
     &-a {
       @include fontPoppins(300, italic);
@@ -58,6 +60,34 @@
   &__form-title {
     max-width: $widthSectionMainLinks;
     margin-bottom: 50px;
+  }
+}
+@media (max-width: 670px) {
+  .contact {
+    &__mainlinks {
+      padding: 40px 70px;
+    }
+    &__form {
+      padding: 40px 70px;
+    }
+  }
+}
+@media (max-width: 560px) {
+  .contact {
+    &__mainlinks {
+      margin-bottom: 20px;
+    }
+    &__link {
+      padding: 10px 0px;
+      &-span {
+        font-size: 1.1em;
+        max-width: calc(#{$widthSectionMainLinks / 2} - 150px);
+      }
+    }
+    &__form {
+      padding: 40px;
+      margin-bottom: 50px;
+    }
   }
 }
 @media (max-width: 515px) {
