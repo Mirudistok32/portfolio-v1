@@ -104,9 +104,9 @@ export const ContactFeedbackForm: React.FC<PropsType> = React.memo((props) => {
                 }
             </label>
             <label className={s.form__row}>
-                <span className={s.form__title + ` ${formik.errors.description ? s['form__description-error'] : ''}`}>Your Comment</span>
+                <span className={s.form__title + ` ${formik.errors.description ? s['form__title-error'] : ''}`}>Your Comment</span>
                 <textarea
-                    className={s.form__description}
+                    className={s.form__description + ` ${formik.errors.name ? s['form__description-error'] : ''}`}
                     name="description"
                     onBlur={(e) => onBluerHandler(e)}
                     onScroll={(e) => onScrollHandler(e)}
