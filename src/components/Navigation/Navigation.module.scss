@@ -11,9 +11,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  svg {
-    height: 40px;
-  }
   &__btn {
     display: inline-block;
     margin-bottom: 10px;
@@ -64,24 +61,6 @@
     fill: $colorBorderMyPhoto;
   }
 }
-@media (max-width: 1100px) {
-  .navigation {
-    top: 30px;
-    left: 00px;
-    svg {
-      height: 30px;
-    }
-  }
-}
-@media (max-width: 1100px) {
-  .navigation {
-    top: 30px;
-    left: 00px;
-    svg {
-      height: 30px;
-    }
-  }
-}
 @media (min-width: 320px) {
   .navigation {
     top: 20px;
@@ -89,8 +68,6 @@
     &__list {
       background-color: rgb(0, 0, 0);
       border-radius: 5px;
-      border-top-right-radius: 50px;
-      border-bottom-right-radius: 50px;
     }
     svg {
       height: 20px;
@@ -107,10 +84,64 @@
       background-color: rgb(34, 34, 36);
       transform: translateX(0px) rotateZ(-180deg);
     }
-    &__list-element {
-      font-size: 0.8em;
-      height: $heightNavigationElement;
-      padding: $paddingNavigationElement;
+  }
+}
+@media (min-width: 500px) {
+  .navigation {
+    top: 20px;
+    left: 10px;
+    &__list {
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+    }
+    svg {
+      height: 40px;
+    }
+    &__btn {
+      &:hover {
+        box-shadow: 0 0 10px 0px $colorBorderMyPhoto, 0 0 30px 20px #000;
+        background-color: rgb(34, 34, 36);
+      }
+    }
+    &__btn-active {
+      box-shadow: 0 0 10px 1px $colorBorderMyPhoto, 0 0 30px 20px #000;
+      background-color: rgb(34, 34, 36);
+      transform: translateX(0px) rotateZ(-180deg);
+    }
+  }
+}
+@media (min-width: 600px) {
+  .navigation {
+    top: 30px;
+    left: 00px;
+    &__list {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    svg {
+      height: 30px;
+    }
+    &__btn {
+      transform: translateX(0px) rotateZ(0deg);
+      &:hover {
+        background-color: rgba(34, 34, 36, 0.438);
+        box-shadow: 0 0 10px 0px $colorBorderMyPhoto;
+      }
+    }
+    &__btn-active {
+      box-shadow: 0 0 10px 1px $colorBorderMyPhoto;
+      background-color: rgba(34, 34, 36, 0.438);
+      transform: translateX(-20px) rotateZ(-180deg);
+    }
+  }
+}
+@media (min-width: 1100px) {
+  .navigation {
+    left: 30px;
+    &__list {
+      background-color: transparent;
+    }
+    svg {
+      height: 40px;
     }
   }
 }
