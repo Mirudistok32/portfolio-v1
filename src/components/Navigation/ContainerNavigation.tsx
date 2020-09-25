@@ -1,14 +1,13 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Navigation } from './Navigation'
 import { getNavigationIsOpenSelect, getNavigationNavElementsSelect } from '../../redux/selectors/navigation-selector'
 import { actionsNavigationReducer } from '../../redux/reducers/navigation-reducer'
 
-type OwnerProps = {
+
+type PropsType = {
 
 }
-
-type PropsType = OwnerProps
 
 export const ContainerNavigation: React.FC<PropsType> = (props) => {
 
@@ -16,7 +15,7 @@ export const ContainerNavigation: React.FC<PropsType> = (props) => {
     const isOpen = useSelector(getNavigationIsOpenSelect)
     const navElements = useSelector(getNavigationNavElementsSelect)
 
-    const toggleOpenNavList = (is: boolean) => dispatch(actionsNavigationReducer.toggleOpenNavListAC(is))
+    const toggleOpenNavList = useCallback((is: boolean) => dispatch(actionsNavigationReducer.toggleOpenNavListAC(is)), [dispatch])
 
 
     return (
