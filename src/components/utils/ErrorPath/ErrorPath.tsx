@@ -6,7 +6,7 @@ type PropsType = {
     lightColor?: boolean
 }
 
-export const ErrorPath: React.FC<PropsType> = (props) => {
+export const ErrorPath: React.FC<PropsType> = React.memo((props) => {
 
     const { children, darkColor, lightColor } = props
 
@@ -21,4 +21,4 @@ export const ErrorPath: React.FC<PropsType> = (props) => {
             {children}
         </div>
     )
-}
+})
