@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react'
+import React, { useCallback, useMemo } from 'react'
 import s from './Navigation.module.scss'
 import { DownArrowSVG } from './DownArrowSVG/DownArrowSVG'
 import { NavLink } from 'react-router-dom'
@@ -46,9 +46,9 @@ export const Navigation: React.FC<PropsType> = React.memo((props) => {
     }), [listElementClass, navElements, toggleOpenNavList])
 
     // Функции и колбэки
-    const onClickDownArrowHandler = () => {
+    const onClickDownArrowHandler = useCallback(() => {
         toggleOpenNavList(!isOpen)
-    }
+    }, [isOpen, toggleOpenNavList])
 
     // Какие-то условные действия с классами
     // listClass
