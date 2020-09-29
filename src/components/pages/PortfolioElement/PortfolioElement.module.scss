@@ -40,8 +40,14 @@
     padding: 0 10px;
     background-color: #000;
     overflow: hidden;
-    img{
+    a {
+      display: inline-block;
       height: inherit;
+      width: 100%;
+    }
+    img {
+      height: inherit;
+      width: inherit;
     }
   }
 }
@@ -56,11 +62,7 @@
     }
     &__element-canvas {
       width: 100%;
-      min-height: $heightCanvas;
-      height: 100%;
       padding: 0px;
-      box-shadow: 0 0 0 3px $colorBorderMyPhoto, inset 0 0 100px 0 #000,
-        inset 0 0 10px 5px #000;
     }
     &__element-title {
       margin-bottom: 10px;
@@ -99,12 +101,25 @@
     &__element-title {
       font-size: 2.6em;
     }
+    &__element-canvas {
+      height: 375px;
+    }
+  }
+}
+@media (max-width: 360px) {
+  .portfolio {
+    &__element-canvas {
+      height: 360px;
+    }
   }
 }
 @media (max-width: 320px) {
   .portfolio {
     &__element {
       max-width: 315px;
+    }
+    &__element-canvas {
+      height: 320px;
     }
   }
 }

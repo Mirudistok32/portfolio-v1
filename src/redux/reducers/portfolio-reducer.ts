@@ -27,7 +27,7 @@ type InitialStateType = {
 const initialState: InitialStateType = {
     portfolioInfoProjectDatas: [
         {
-            mainTitle: "GeneratorPassword",
+            mainTitle: "Generator Password",
             id: v4(),
             listsInfo: [
                 {
