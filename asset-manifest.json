@@ -1,24 +1,27 @@
 {
   "files": {
-    "main.css": "/portfolio-v1/static/css/main.53f52bbc.chunk.css",
-    "main.js": "/portfolio-v1/static/js/main.79cb9875.chunk.js",
-    "main.js.map": "/portfolio-v1/static/js/main.79cb9875.chunk.js.map",
+    "main.css": "/portfolio-v1/static/css/main.e2ef3cc4.chunk.css",
+    "main.js": "/portfolio-v1/static/js/main.06c734d8.chunk.js",
+    "main.js.map": "/portfolio-v1/static/js/main.06c734d8.chunk.js.map",
     "runtime-main.js": "/portfolio-v1/static/js/runtime-main.5aa8f5a2.js",
     "runtime-main.js.map": "/portfolio-v1/static/js/runtime-main.5aa8f5a2.js.map",
-    "static/js/2.7ec64a7c.chunk.js": "/portfolio-v1/static/js/2.7ec64a7c.chunk.js",
-    "static/js/2.7ec64a7c.chunk.js.map": "/portfolio-v1/static/js/2.7ec64a7c.chunk.js.map",
+    "static/js/2.1ea2afe0.chunk.js": "/portfolio-v1/static/js/2.1ea2afe0.chunk.js",
+    "static/js/2.1ea2afe0.chunk.js.map": "/portfolio-v1/static/js/2.1ea2afe0.chunk.js.map",
     "index.html": "/portfolio-v1/index.html",
-    "precache-manifest.6a80dd324d9b390df043bae0c6f795ab.js": "/portfolio-v1/precache-manifest.6a80dd324d9b390df043bae0c6f795ab.js",
+    "precache-manifest.24e721bfc145d5e72eeb665676b97478.js": "/portfolio-v1/precache-manifest.24e721bfc145d5e72eeb665676b97478.js",
     "service-worker.js": "/portfolio-v1/service-worker.js",
-    "static/css/main.53f52bbc.chunk.css.map": "/portfolio-v1/static/css/main.53f52bbc.chunk.css.map",
-    "static/js/2.7ec64a7c.chunk.js.LICENSE.txt": "/portfolio-v1/static/js/2.7ec64a7c.chunk.js.LICENSE.txt",
+    "static/css/main.e2ef3cc4.chunk.css.map": "/portfolio-v1/static/css/main.e2ef3cc4.chunk.css.map",
+    "static/js/2.1ea2afe0.chunk.js.LICENSE.txt": "/portfolio-v1/static/js/2.1ea2afe0.chunk.js.LICENSE.txt",
+    "static/media/click-me-game.webp": "/portfolio-v1/static/media/click-me-game.2434e2ca.webp",
     "static/media/App.scss": "/portfolio-v1/static/media/forest-5286824_1920.95965a39.jpg",
-    "static/media/photoForAvatar.png": "/portfolio-v1/static/media/photoForAvatar.384a8094.png"
+    "static/media/generator-password.webp": "/portfolio-v1/static/media/generator-password.2314beb3.webp",
+    "static/media/increment-way.webp": "/portfolio-v1/static/media/increment-way.f0f49128.webp",
+    "static/media/photoForAvatar.webp": "/portfolio-v1/static/media/photoForAvatar.1aa6bd36.webp"
   },
   "entrypoints": [
     "static/js/runtime-main.5aa8f5a2.js",
-    "static/js/2.7ec64a7c.chunk.js",
-    "static/css/main.53f52bbc.chunk.css",
-    "static/js/main.79cb9875.chunk.js"
+    "static/js/2.1ea2afe0.chunk.js",
+    "static/css/main.e2ef3cc4.chunk.css",
+    "static/js/main.06c734d8.chunk.js"
   ]
 }
