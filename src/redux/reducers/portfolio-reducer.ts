@@ -1,5 +1,8 @@
 import { v4 } from "uuid"
 import { InferActionsTypes } from "../store"
+import clickMeGame from '../../assets/images/projects/click-me-game.webp'
+import incrementWay from '../../assets/images/projects/increment-way.webp'
+import generatorPassword from '../../assets/images/projects/generator-password.webp'
 
 export type PortfolioInfoListDataType = {
     keyTitle: string
@@ -13,8 +16,8 @@ export type PortfolioInfoProjectDataType = {
     mainTitle: string
     id: string
     listsInfo: Array<PortfolioInfoListDataType>
-    iframeLink: string
-    iframeTitle: string
+    urlImages: string
+    linkImages: string
 }
 
 type InitialStateType = {
@@ -23,6 +26,38 @@ type InitialStateType = {
 
 const initialState: InitialStateType = {
     portfolioInfoProjectDatas: [
+        {
+            mainTitle: "GeneratorPassword",
+            id: v4(),
+            listsInfo: [
+                {
+                    keyTitle: "Link",
+                    valueTitle: "https://mirudistok32.github.io/generator-password/",
+                    isLink: true,
+                    link: "https://mirudistok32.github.io/generator-password/",
+                    id: v4(),
+                },
+                {
+                    keyTitle: "GitHub",
+                    valueTitle: "https://github.com/Mirudistok32/generator-password",
+                    isLink: true,
+                    link: "https://github.com/Mirudistok32/generator-password",
+                    id: v4(),
+                },
+                {
+                    keyTitle: "Description",
+                    valueTitle: "Generator Password - быстрый способ создать хороший пароль.",
+                    id: v4(),
+                },
+                {
+                    keyTitle: "Technologies",
+                    valueTitle: "#reduxToolkit, #immer, #react, #javascript, #typescript #html, #css, #hooks, #scss, #memo",
+                    id: v4(),
+                },
+            ],
+            urlImages: generatorPassword,
+            linkImages: "https://mirudistok32.github.io/generator-password/"
+        },
         {
             mainTitle: "ClickMeGame",
             id: v4(),
@@ -52,8 +87,8 @@ const initialState: InitialStateType = {
                     id: v4(),
                 },
             ],
-            iframeTitle: "ClickMeGame",
-            iframeLink: "https://mirudistok32.github.io/ClickMeGame/",
+            urlImages: clickMeGame,
+            linkImages: "https://mirudistok32.github.io/ClickMeGame/"
         },
         {
             mainTitle: "Increment Way",
@@ -84,8 +119,8 @@ const initialState: InitialStateType = {
                     id: v4(),
                 },
             ],
-            iframeTitle: "Increment Way",
-            iframeLink: "https://mirudistok32.github.io/SamuraiWayIncrement/",
+            urlImages: incrementWay,
+            linkImages: "https://mirudistok32.github.io/SamuraiWayIncrement/"
         },
     ],
 }

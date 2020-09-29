@@ -1,6 +1,6 @@
 import React from 'react'
 import s from './Home.module.scss'
-import myPhoto from '../../../assets/images/photos/photoForAvatar.png'
+import myPhoto from '../../../assets/images/photos/photoForAvatar.webp'
 import { PATH } from '../../../Route'
 import { Images } from '../../Images/Images'
 

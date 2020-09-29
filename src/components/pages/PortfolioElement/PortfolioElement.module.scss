@@ -9,7 +9,7 @@
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.4);
     box-shadow: 4px 13px 16px -5px #000000;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
   }
   &__element-title {
     @include fontUbuntu;
@@ -39,10 +39,9 @@
     border-radius: 5px;
     padding: 0 10px;
     background-color: #000;
-    iframe {
-      height: 100%;
-      width: 100%;
-      border-style: none;
+    overflow: hidden;
+    img{
+      height: inherit;
     }
   }
 }

@@ -7,8 +7,8 @@ type PropsType = {
     mainTitle: string
     id?: string
     listsInfo: Array<PortfolioInfoListDataType>
-    iframeLink: string
-    iframeTitle: string
+    urlImages: string
+    linkImage: string
 }
 
 export const PortfolioElement: React.FC<PropsType> = React.memo((props) => {
@@ -16,8 +16,8 @@ export const PortfolioElement: React.FC<PropsType> = React.memo((props) => {
     const {
         mainTitle,
         listsInfo,
-        iframeLink,
-        iframeTitle, } = props
+        urlImages,
+        linkImage } = props
 
     const renderElement = useMemo(() => listsInfo.map(l => {
         return <Element
@@ -29,6 +29,7 @@ export const PortfolioElement: React.FC<PropsType> = React.memo((props) => {
         />
     }), [listsInfo])
 
+
     return (
         <div className={s['portfolio__element']}>
             <div className={s['portfolio__element-title']}>{mainTitle}</div>
@@ -39,7 +40,9 @@ export const PortfolioElement: React.FC<PropsType> = React.memo((props) => {
                     }
                 </div>
                 <div className={s['portfolio__element-canvas']}>
-                    <iframe allowFullScreen src={iframeLink} title={iframeTitle} />
+                    <a href={linkImage} target="_blank" rel="noopener noreferrer">
+                        <img src={urlImages} alt="avatar" />
+                    </a>
                 </div>
             </div>
         </div>

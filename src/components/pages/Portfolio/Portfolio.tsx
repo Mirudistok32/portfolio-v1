@@ -15,14 +15,14 @@ export const Portfolio: React.FC<PropsType> = React.memo((props) => {
 
     const renderElements = useMemo(() => portfolioInfoProjectDatas.map(elem => {
 
-        const { id, iframeLink, iframeTitle, listsInfo, mainTitle } = elem
+        const { id, listsInfo, mainTitle, urlImages, linkImages } = elem
 
         return <PortfolioElement
             key={id}
-            iframeLink={iframeLink}
-            iframeTitle={iframeTitle}
+            urlImages={urlImages}
             listsInfo={listsInfo}
             mainTitle={mainTitle}
+            linkImage={linkImages}
         />
     }), [portfolioInfoProjectDatas])
 

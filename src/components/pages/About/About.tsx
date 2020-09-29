@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react'
 import s from './About.module.scss'
 import { TitleHeader } from '../../TitleHeader/TitleHeader'
-import myPhoto from '../../../assets/images/photos/photoForAvatar.png'
+import myPhoto from '../../../assets/images/photos/photoForAvatar.webp'
 import { InfoDataType, ListSkillsDataType } from '../../../redux/reducers/about-reducer'
 import { Element } from '../../Element/Element'
 
