@@ -28,8 +28,8 @@ const initialState: InitialStateType = {
         {
             id: v4(),
             title: "Vk",
-            linkTitle: "vk.com/mirudistok",
-            link: "https://vk.com/mirudistok",
+            linkTitle: "vk.com/postnikov_st",
+            link: "https://vk.com/postnikov_st",
         },
         {
             id: v4(),
@@ -43,12 +43,12 @@ const initialState: InitialStateType = {
             linkTitle: "linkedin.com/in/stanislav-postnikov-6220331b7/",
             link: "https://www.linkedin.com/in/stanislav-postnikov-6220331b7/",
         },
-        {
-            id: v4(),
-            title: "Twitter",
-            linkTitle: "https://twitter.com/postnikov_st",
-            link: "https://twitter.com/postnikov_st",
-        },
+        // {
+        //     id: v4(),
+        //     title: "Twitter",
+        //     linkTitle: "https://twitter.com/postnikov_st",
+        //     link: "https://twitter.com/postnikov_st",
+        // },
         {
             id: v4(),
             title: "GitHub",
